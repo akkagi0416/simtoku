@@ -13,11 +13,39 @@
     </head>
     <body>
         <header>
-            <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
-            <p class="search"><i class="fa fa-search"></i></p>
-            <form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
-                <input type="text" value name="s" placeholder="検索...">
-                <input type="submit" value="検索">
-            </form>
-            <nav><?php wp_nav_menu(); ?></nav>
+            <div class="container">
+                <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
+<!--
+                <p class="search"><i class="fa fa-search"></i></p>
+                <form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
+                    <input type="text" value name="s" placeholder="検索...">
+                    <input type="submit" value="検索">
+                </form>
+-->
+<?php
+    $args = array(
+        'container' => 'nav',
+        'container_class' => 'navbar navbar-default',
+        'menu_class' => 'nav navbar-nav',
+        );
+    wp_nav_menu( $args );
+?>
+            </div>
+            <div class="container">
+                <div class="breadcrumb">
+<?php
+    if( function_exists( 'bcn_display' ) ){
+        bcn_display();
+    }
+?>
+                </div>
+            </div>
+            <div class="img_main">
+                <div class="container">
+                    <!--
+                    <img src="<?php bloginfo( 'template_url' ); ?>/img/main.jpg" alt="" class="img-responsive">
+                    -->
+                    <img src="http://lorempixel.com/600/200/technics/" alt="" class="img-responsive">
+                </div>
+            </div>
         </header>

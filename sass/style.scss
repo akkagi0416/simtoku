@@ -5,10 +5,71 @@
 */
 
 // Import Bootstrap Compass integration
-@import "bootstrap-compass";
+// @import "bootstrap-compass";
 
 // Import custom Bootstrap variables
-@import "bootstrap-variables";
+// @import "bootstrap-variables";
 
 // Import Bootstrap for Sass
-@import "bootstrap";
+// @import "bootstrap";
+
+// @import "compass";
+
+$color_main : #fed232;
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+    &:before{
+        padding-right: 0.3em;
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-size: 1.3em;
+        content: "\f14a";   // check-square
+        // content: "\f046";   // check-square-o
+        color: $color_main;
+    }
+}
+header{
+    overflow: hidden;
+    h1{
+        float: left;
+    }
+    nav{
+        float: right;
+    }
+}
+nav{
+    &.navbar-default{
+        background-color: #fff;
+        border: none;
+        .navbar-nav>li>a{
+            color: #333;
+        }
+    }
+    ul{
+        li{
+            a{
+                &:before{
+                    // display: block;
+                    padding-right: 0.3em;
+                    font-family: FontAwesome;
+                    font-weight: normal;
+                    font-size: 1.3em;
+                }
+            }
+            &.info      a:before{ content: "\f044"; }   // pencil-square-o
+            &.plan      a:before{ content: "\f115"; }   // folder-open-o
+            &.mobile    a:before{ content: "\f10b"; }   // mobile
+            &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
+            &.faq       a:before{ content: "\f0e5"; }   // comment-o
+        }
+    }
+}
+
+.img_main{
+    height: 200px;
+    background-color: $color_main;
+    box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
+}

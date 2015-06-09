@@ -31,10 +31,15 @@ h2{
         color: $color_main;
     }
 }
+p{
+    line-height: 1.7;
+}
 header{
     overflow: hidden;
     h1{
         float: left;
+        font-size: 24px;
+        font-weight: bold;
     }
     nav{
         float: right;
@@ -73,3 +78,13 @@ nav{
     background-color: $color_main;
     box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
 }
+
+footer{
+    background-color: #eee;
+    small{
+        display: block;
+        text-align: center;
+    }
+}
+
+

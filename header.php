@@ -15,7 +15,17 @@
     <body>
         <header>
             <div class="container">
+<?php
+    if( is_front_page() ) :
+?>
                 <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
+<?php
+    else :
+?>
+                <p><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></p>
+<?php
+    endif;
+?>
 <!--
                 <p class="search"><i class="fa fa-search"></i></p>
                 <form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
@@ -39,10 +49,11 @@
                     <div class="col-md-6">
                         <h2>格安SIMで毎月5,000円のお得なスマホ生活</h2>
                     </div>
-                    <div class="col-md-2"></div>
+                    <div class="col-md-1"></div>
                     <div class="col-md-4">
-                        <img src="http://lorempixel.com/600/200/technics/" alt="" class="img-responsive">
+                        <img src="<?php bloginfo( 'template_url' ); ?>/img/fotolia_67461371.jpg" alt="" class="img-responsive">
                     </div>
+                    <div class="col-md-1"></div>
                 </div>
                 <!--
                 <img src="<?php bloginfo( 'template_url' ); ?>/img/main.jpg" alt="" class="img-responsive">

@@ -15,7 +15,8 @@
 
 // @import "compass";
 
-$color_main : #fed232;
+// $color_main : #fed232;
+$color_main : #fdde6e;
 
 h2{
     font-size: 24px;
@@ -37,12 +38,11 @@ p{
 header{
     overflow: hidden;
     h1{
-        float: left;
         font-size: 24px;
         font-weight: bold;
     }
     nav{
-        float: right;
+        // float: right;
     }
 }
 nav{
@@ -75,8 +75,8 @@ nav{
 
 .img_main{
     height: 200px;
-    background-color: $color_main;
-    box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
+    // background-color: $color_main;
+    // box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
 }
 
 footer{
@@ -87,4 +87,22 @@ footer{
     }
 }
 
-
+.nav_wrap{
+    border-bottom: 5px solid $color_main;
+    .navbar{
+        margin-bottom: 0;
+        ul {
+            li{
+                a{
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    border-radius: 5px 5px 0 0;
+                    &:hover{
+                        // color: #fff;
+                        background-color: $color_main;
+                    }
+                }
+            }
+        }
+    }
+}

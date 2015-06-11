@@ -33,6 +33,10 @@
                     <input type="submit" value="検索">
                 </form>
 -->
+            </div>
+        </header>
+        <div class="nav_wrap">
+            <div class="container">
 <?php
     $args = array(
         'container' => 'nav',
@@ -42,7 +46,7 @@
     wp_nav_menu( $args );
 ?>
             </div>
-        </header>
+        </div>
         <div class="img_main">
             <div class="container">
                 <div class="row">

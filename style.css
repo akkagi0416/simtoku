@@ -3,40 +3,35 @@
  Description: sim toku
  Author URI: http://akkagi.info
 */
-/* line 20, sass/style.scss */
+/* line 21, sass/style.scss */
 h2 {
   font-size: 24px;
   font-weight: bold;
   color: #444;
 }
-/* line 24, sass/style.scss */
+/* line 25, sass/style.scss */
 h2:before {
   padding-right: 0.3em;
   font-family: FontAwesome;
   font-weight: normal;
   font-size: 1.3em;
   content: "\f14a";
-  color: #fed232;
+  color: #fdde6e;
 }
 
-/* line 34, sass/style.scss */
+/* line 35, sass/style.scss */
 p {
   line-height: 1.7;
 }
 
-/* line 37, sass/style.scss */
+/* line 38, sass/style.scss */
 header {
   overflow: hidden;
 }
-/* line 39, sass/style.scss */
+/* line 40, sass/style.scss */
 header h1 {
-  float: left;
   font-size: 24px;
   font-weight: bold;
-}
-/* line 44, sass/style.scss */
-header nav {
-  float: right;
 }
 
 /* line 49, sass/style.scss */
@@ -79,8 +74,6 @@ nav ul li.faq a:before {
 /* line 76, sass/style.scss */
 .img_main {
   height: 200px;
-  background-color: #fed232;
-  box-shadow: 0 3px 3px rgba(50, 50, 50, 0.1) inset;
 }
 
 /* line 82, sass/style.scss */
@@ -91,4 +84,23 @@ footer {
 footer small {
   display: block;
   text-align: center;
+}
+
+/* line 90, sass/style.scss */
+.nav_wrap {
+  border-bottom: 5px solid #fdde6e;
+}
+/* line 92, sass/style.scss */
+.nav_wrap .navbar {
+  margin-bottom: 0;
+}
+/* line 96, sass/style.scss */
+.nav_wrap .navbar ul li a {
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+/* line 100, sass/style.scss */
+.nav_wrap .navbar ul li a:hover {
+  background-color: #fdde6e;
 }

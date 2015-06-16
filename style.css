@@ -5,11 +5,12 @@
 */
 /* line 21, sass/style.scss */
 h2 {
+  padding: 10px 0;
   font-size: 24px;
   font-weight: bold;
   color: #444;
 }
-/* line 25, sass/style.scss */
+/* line 26, sass/style.scss */
 h2:before {
   padding-right: 0.3em;
   font-family: FontAwesome;
@@ -19,88 +20,195 @@ h2:before {
   color: #fdde6e;
 }
 
-/* line 35, sass/style.scss */
+/* line 37, sass/style.scss */
 p {
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* line 38, sass/style.scss */
+/* line 40, sass/style.scss */
+a > img:hover {
+  opacity: 0.8;
+}
+
+/* line 43, sass/style.scss */
 header {
   overflow: hidden;
 }
-/* line 40, sass/style.scss */
-header h1 {
+/* line 45, sass/style.scss */
+header .logo {
+  margin-top: 20px;
+  line-height: 1.1;
   font-size: 24px;
   font-weight: bold;
 }
 
-/* line 49, sass/style.scss */
+/* line 56, sass/style.scss */
 nav.navbar-default {
   background-color: #fff;
   border: none;
 }
-/* line 52, sass/style.scss */
+/* line 59, sass/style.scss */
 nav.navbar-default .navbar-nav > li > a {
   color: #333;
 }
-/* line 59, sass/style.scss */
+/* line 66, sass/style.scss */
 nav ul li a:before {
   padding-right: 0.3em;
   font-family: FontAwesome;
   font-weight: normal;
   font-size: 1.3em;
 }
-/* line 67, sass/style.scss */
+/* line 74, sass/style.scss */
 nav ul li.info a:before {
   content: "\f044";
 }
-/* line 68, sass/style.scss */
+/* line 75, sass/style.scss */
 nav ul li.plan a:before {
   content: "\f115";
 }
-/* line 69, sass/style.scss */
+/* line 76, sass/style.scss */
 nav ul li.mobile a:before {
   content: "\f10b";
 }
-/* line 70, sass/style.scss */
+/* line 77, sass/style.scss */
 nav ul li.guide a:before {
   content: "\f087";
 }
-/* line 71, sass/style.scss */
+/* line 78, sass/style.scss */
 nav ul li.faq a:before {
   content: "\f0e5";
 }
 
-/* line 76, sass/style.scss */
+/* line 83, sass/style.scss */
 .img_main {
   height: 200px;
 }
 
-/* line 82, sass/style.scss */
-footer {
-  background-color: #eee;
-}
-/* line 84, sass/style.scss */
-footer small {
-  display: block;
-  text-align: center;
+/* line 88, sass/style.scss */
+.breadcrumb {
+  background-color: #fff;
 }
 
-/* line 90, sass/style.scss */
+/* line 92, sass/style.scss */
 .nav_wrap {
   border-bottom: 5px solid #fdde6e;
 }
-/* line 92, sass/style.scss */
+/* line 94, sass/style.scss */
 .nav_wrap .navbar {
   margin-bottom: 0;
 }
-/* line 96, sass/style.scss */
+/* line 98, sass/style.scss */
 .nav_wrap .navbar ul li a {
   font-size: 1.1em;
   font-weight: bold;
   border-radius: 5px 5px 0 0;
 }
-/* line 100, sass/style.scss */
+/* line 102, sass/style.scss */
 .nav_wrap .navbar ul li a:hover {
   background-color: #fdde6e;
+}
+
+/* line 113, sass/style.scss */
+.main h3 {
+  margin-top: 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #fdde6e;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+/* line 119, sass/style.scss */
+.main h3 i {
+  padding-right: 0.3em;
+  font-size: 1.3em;
+}
+/* line 124, sass/style.scss */
+.main .btn {
+  margin-top: 1em;
+}
+/* line 129, sass/style.scss */
+.main section .thumbnail img {
+  margin-top: 4px;
+}
+/* line 133, sass/style.scss */
+.main section .img-box {
+  margin-bottom: 1em;
+}
+/* line 135, sass/style.scss */
+.main section .img-box img {
+  margin-top: 4px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 143, sass/style.scss */
+.main section .row {
+  margin-bottom: 40px;
+}
+/* line 146, sass/style.scss */
+.main section .mobile-box {
+  margin: 4px;
+  margin-bottom: 20px;
+  padding: 4px;
+  padding-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* line 158, sass/style.scss */
+.mvno_info dl dt, .mvno_info dl dd {
+  float: left;
+  line-height: 1.8;
+}
+/* line 162, sass/style.scss */
+.mvno_info dl dt {
+  width: 30%;
+  clear: both;
+}
+/* line 166, sass/style.scss */
+.mvno_info dl dd {
+  width: 70%;
+}
+/* line 172, sass/style.scss */
+.mvno_info table tr th, .mvno_info table tr td {
+  padding: 5px;
+  text-align: center;
+}
+/* line 176, sass/style.scss */
+.mvno_info table tr .tbl_group {
+  background-color: #eee;
+  text-align: left;
+  padding-left: 5em;
+}
+
+/* line 185, sass/style.scss */
+aside h3 {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #eee;
+}
+
+/* line 192, sass/style.scss */
+footer {
+  background-color: #eee;
+}
+/* line 194, sass/style.scss */
+footer small {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  /* line 202, sass/style.scss */
+  p {
+    line-height: 2.0;
+  }
+
+  /* line 207, sass/style.scss */
+  .main section .img-box {
+    margin-bottom: 0;
+  }
+  /* line 210, sass/style.scss */
+  .main section .mobile-box {
+    border: none;
+  }
 }

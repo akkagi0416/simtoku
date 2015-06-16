@@ -19,6 +19,7 @@
 $color_main : #fdde6e;
 
 h2{
+    padding: 10px 0;
     font-size: 24px;
     font-weight: bold;
     color: #444;
@@ -29,15 +30,21 @@ h2{
         font-size: 1.3em;
         content: "\f14a";   // check-square
         // content: "\f046";   // check-square-o
+        // content: "\f024";   // flag
         color: $color_main;
     }
 }
 p{
-    line-height: 1.7;
+    line-height: 1.6;
+}
+a>img:hover{
+    opacity: 0.8;
 }
 header{
     overflow: hidden;
-    h1{
+    .logo{
+        margin-top: 20px;
+        line-height: 1.1;
         font-size: 24px;
         font-weight: bold;
     }
@@ -78,13 +85,8 @@ nav{
     // background-color: $color_main;
     // box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
 }
-
-footer{
-    background-color: #eee;
-    small{
-        display: block;
-        text-align: center;
-    }
+.breadcrumb{
+    background-color: #fff;
 }
 
 .nav_wrap{
@@ -102,6 +104,111 @@ footer{
                         background-color: $color_main;
                     }
                 }
+            }
+        }
+    }
+}
+
+.main{
+    h3{
+        margin-top: 0;
+        padding-bottom: 4px;
+        border-bottom: 2px solid $color_main;
+        font-size: 1.1em;
+        font-weight: bold;
+        i{
+            padding-right: 0.3em;
+            font-size: 1.3em;
+        }
+    }
+    .btn{
+        margin-top: 1em;
+    }
+    section{
+        .thumbnail{
+            img{
+                margin-top: 4px;
+            }
+        }
+        .img-box{
+            margin-bottom: 1em;
+            img{
+                margin-top: 4px;
+                margin-right: auto;
+                margin-left: auto;
+                // @include box-shadow(1px 1px 3px #ccc);
+                // box-shadow: 1px 1px 3px #ccc;
+            }
+        }
+        .row{
+            margin-bottom: 40px;
+        }
+        .mobile-box{
+            margin: 4px;
+            margin-bottom: 20px;
+            padding: 4px;
+            padding-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    }
+}
+.mvno_info{
+    dl{
+        dt,dd{
+            float: left;
+            line-height: 1.8;
+        }
+        dt{
+            width: 30%;
+            clear: both;
+        }
+        dd{
+            width: 70%;
+        }
+    }
+    table{
+        tr{
+            th,td{
+                padding: 5px;
+                text-align: center;
+            }
+            .tbl_group{
+                background-color: #eee;
+                text-align: left;
+                padding-left: 5em;
+            }
+        }
+    }
+}
+aside{
+    h3{
+        padding: 12px;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #eee;
+    }
+}
+footer{
+    background-color: #eee;
+    small{
+        display: block;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 768px){
+    p{
+        line-height: 2.0;
+    }
+    .main{
+        section{
+            .img-box{
+                margin-bottom: 0;
+            }
+            .mobile-box{
+                border: none;
             }
         }
     }

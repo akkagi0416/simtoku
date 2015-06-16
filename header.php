@@ -18,11 +18,11 @@
 <?php
     if( is_front_page() ) :
 ?>
-                <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
+                <h1 class="logo"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
 <?php
     else :
 ?>
-                <p><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></p>
+                <p class="logo"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></p>
 <?php
     endif;
 ?>
@@ -49,6 +49,7 @@
         </div>
         <div class="img_main">
             <div class="container">
+                <!--
                 <div class="row">
                     <div class="col-md-6">
                         <h2>格安SIMで毎月5,000円のお得なスマホ生活</h2>
@@ -59,17 +60,18 @@
                     </div>
                     <div class="col-md-1"></div>
                 </div>
-                <!--
-                <img src="<?php bloginfo( 'template_url' ); ?>/img/main.jpg" alt="" class="img-responsive">
                 -->
+                <img src="<?php bloginfo( 'template_url' ); ?>/img/main.png" alt="" class="img-responsive">
             </div>
         </div>
+<?php
+if( function_exists( 'bcn_display' ) && !is_front_page() ){
+?>
         <div class="container">
             <div class="breadcrumb">
-<?php
-if( function_exists( 'bcn_display' ) ){
-    bcn_display();
-}
-?>
+                <?php bcn_display(); ?>
             </div>
         </div>
+<?php
+}
+?>

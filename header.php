@@ -34,6 +34,7 @@
                 </form>
 -->
             </div>
+            <button type="button" id="button" class="visible-xs"><i class="fa fa-bars"></i>メニュー</button>
         </header>
         <div class="nav_wrap">
             <div class="container">

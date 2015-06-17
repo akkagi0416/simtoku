@@ -18,6 +18,15 @@
 // $color_main : #fed232;
 $color_main : #fdde6e;
 
+h1{
+    padding: 10px 20px;
+    border-left: 4px solid $color_main;
+    border-bottom: 4px solid $color_main;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+}
 h2{
     padding: 10px 0;
     font-size: 24px;
@@ -35,7 +44,7 @@ h2{
     }
 }
 p{
-    line-height: 1.6;
+    line-height: 2.0;
 }
 a>img:hover{
     opacity: 0.8;
@@ -44,69 +53,57 @@ header{
     overflow: hidden;
     .logo{
         margin-top: 20px;
+        padding-left: 0;
         line-height: 1.1;
         font-size: 24px;
         font-weight: bold;
-    }
-    nav{
-        // float: right;
+        border: none;
     }
 }
-nav{
-    &.navbar-default{
-        background-color: #fff;
-        border: none;
-        .navbar-nav>li>a{
-            color: #333;
-        }
-    }
-    ul{
-        li{
-            a{
-                &:before{
-                    // display: block;
-                    padding-right: 0.3em;
-                    font-family: FontAwesome;
-                    font-weight: normal;
-                    font-size: 1.3em;
+.nav_wrap{
+    border-bottom: 5px solid $color_main;
+    nav{
+        &.navbar-default{
+            margin-bottom: 0;
+            background-color: #fff;
+            border: none;
+            .navbar-nav>li>a{
+                font-size: 1.1em;
+                font-weight: bold;
+                color: #333;
+                &:hover{
+                    // font-weight: bold;
                 }
             }
-            &.info      a:before{ content: "\f044"; }   // pencil-square-o
-            &.plan      a:before{ content: "\f115"; }   // folder-open-o
-            &.mobile    a:before{ content: "\f10b"; }   // mobile
-            &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
-            &.faq       a:before{ content: "\f0e5"; }   // comment-o
+        }
+        /* nav icon */
+        ul{
+            li{
+                a{
+                    &:before{
+                        // display: block;
+                        padding-right: 0.3em;
+                        font-family: FontAwesome;
+                        font-weight: normal;
+                        font-size: 1.3em;
+                    }
+                }
+                &.info      a:before{ content: "\f044"; }   // pencil-square-o
+                &.plan      a:before{ content: "\f115"; }   // folder-open-o
+                &.mobile    a:before{ content: "\f10b"; }   // mobile
+                &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
+                &.faq       a:before{ content: "\f0e5"; }   // comment-o
+            }
         }
     }
 }
-
 .img_main{
-    height: 200px;
+    // height: 200px;
     // background-color: $color_main;
     // box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
 }
 .breadcrumb{
     background-color: #fff;
-}
-
-.nav_wrap{
-    border-bottom: 5px solid $color_main;
-    .navbar{
-        margin-bottom: 0;
-        ul {
-            li{
-                a{
-                    font-size: 1.1em;
-                    font-weight: bold;
-                    border-radius: 5px 5px 0 0;
-                    &:hover{
-                        // color: #fff;
-                        background-color: $color_main;
-                    }
-                }
-            }
-        }
-    }
 }
 
 .main{
@@ -131,7 +128,7 @@ nav{
             }
         }
         .img-box{
-            margin-bottom: 1em;
+            margin-bottom: 0;
             img{
                 margin-top: 4px;
                 margin-right: auto;
@@ -142,14 +139,6 @@ nav{
         }
         .row{
             margin-bottom: 40px;
-        }
-        .mobile-box{
-            margin: 4px;
-            margin-bottom: 20px;
-            padding: 4px;
-            padding-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
         }
     }
 }
@@ -188,6 +177,18 @@ aside{
         font-size: 16px;
         background-color: #eee;
     }
+    ul{
+        padding-left: 1em;
+        li{
+            list-style: none;
+            a{
+                font-size: 1.1em;
+                line-height: 2.0;
+                .fa-trophy{ color: $color_main; }
+                .fa-circle-o{ color: #fff; }
+            }
+        }
+    }
 }
 footer{
     background-color: #eee;
@@ -197,18 +198,56 @@ footer{
     }
 }
 
-
-@media (min-width: 768px){
+/* desktop first at modified only mobile because of using bootstrap */
+@media (max-width: 768px){
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 20px;
+    }
     p{
-        line-height: 2.0;
+        line-height: 1.6;
+    }
+    header{
+        .logo{
+            font-size: 20px;
+        }
+        position: relative;
+        button{
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            padding: 4px;
+            font-size: 10px;
+            border-radius: 4px; 
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #666;
+            i.fa-bars{
+                display: block;
+                font-size: 20px;
+            }
+            &:hover{
+                background-color: #eee;
+            }
+        }
+    }
+    .nav_wrap{
+        display: none;
     }
     .main{
         section{
             .img-box{
-                margin-bottom: 0;
+                margin-bottom: 1em;
             }
             .mobile-box{
-                border: none;
+                margin: 4px;
+                margin-bottom: 20px;
+                padding: 4px;
+                padding-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
             }
         }
     }

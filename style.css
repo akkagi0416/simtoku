@@ -4,13 +4,24 @@
  Author URI: http://akkagi.info
 */
 /* line 21, sass/style.scss */
+h1 {
+  padding: 10px 20px;
+  border-left: 4px solid #fdde6e;
+  border-bottom: 4px solid #fdde6e;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* line 30, sass/style.scss */
 h2 {
   padding: 10px 0;
   font-size: 24px;
   font-weight: bold;
   color: #444;
 }
-/* line 26, sass/style.scss */
+/* line 35, sass/style.scss */
 h2:before {
   padding-right: 0.3em;
   font-family: FontAwesome;
@@ -20,95 +31,84 @@ h2:before {
   color: #fdde6e;
 }
 
-/* line 37, sass/style.scss */
+/* line 46, sass/style.scss */
 p {
-  line-height: 1.6;
+  line-height: 2.0;
 }
 
-/* line 40, sass/style.scss */
+/* line 49, sass/style.scss */
 a > img:hover {
   opacity: 0.8;
 }
 
-/* line 43, sass/style.scss */
+/* line 52, sass/style.scss */
 header {
   overflow: hidden;
 }
-/* line 45, sass/style.scss */
+/* line 54, sass/style.scss */
 header .logo {
   margin-top: 20px;
+  padding-left: 0;
   line-height: 1.1;
   font-size: 24px;
   font-weight: bold;
+  border: none;
 }
 
-/* line 56, sass/style.scss */
-nav.navbar-default {
+/* line 63, sass/style.scss */
+.nav_wrap {
+  border-bottom: 5px solid #fdde6e;
+}
+/* line 65, sass/style.scss */
+.nav_wrap nav {
+  /* nav icon */
+}
+/* line 66, sass/style.scss */
+.nav_wrap nav.navbar-default {
+  margin-bottom: 0;
   background-color: #fff;
   border: none;
 }
-/* line 59, sass/style.scss */
-nav.navbar-default .navbar-nav > li > a {
+/* line 70, sass/style.scss */
+.nav_wrap nav.navbar-default .navbar-nav > li > a {
+  font-size: 1.1em;
+  font-weight: bold;
   color: #333;
 }
-/* line 66, sass/style.scss */
-nav ul li a:before {
+/* line 83, sass/style.scss */
+.nav_wrap nav ul li a:before {
   padding-right: 0.3em;
   font-family: FontAwesome;
   font-weight: normal;
   font-size: 1.3em;
 }
-/* line 74, sass/style.scss */
-nav ul li.info a:before {
+/* line 91, sass/style.scss */
+.nav_wrap nav ul li.info a:before {
   content: "\f044";
 }
-/* line 75, sass/style.scss */
-nav ul li.plan a:before {
+/* line 92, sass/style.scss */
+.nav_wrap nav ul li.plan a:before {
   content: "\f115";
 }
-/* line 76, sass/style.scss */
-nav ul li.mobile a:before {
+/* line 93, sass/style.scss */
+.nav_wrap nav ul li.mobile a:before {
   content: "\f10b";
 }
-/* line 77, sass/style.scss */
-nav ul li.guide a:before {
+/* line 94, sass/style.scss */
+.nav_wrap nav ul li.guide a:before {
   content: "\f087";
 }
-/* line 78, sass/style.scss */
-nav ul li.faq a:before {
+/* line 95, sass/style.scss */
+.nav_wrap nav ul li.faq a:before {
   content: "\f0e5";
 }
 
-/* line 83, sass/style.scss */
-.img_main {
-  height: 200px;
-}
-
-/* line 88, sass/style.scss */
+/* line 105, sass/style.scss */
 .breadcrumb {
   background-color: #fff;
 }
 
-/* line 92, sass/style.scss */
-.nav_wrap {
-  border-bottom: 5px solid #fdde6e;
-}
-/* line 94, sass/style.scss */
-.nav_wrap .navbar {
-  margin-bottom: 0;
-}
-/* line 98, sass/style.scss */
-.nav_wrap .navbar ul li a {
-  font-size: 1.1em;
-  font-weight: bold;
-  border-radius: 5px 5px 0 0;
-}
-/* line 102, sass/style.scss */
-.nav_wrap .navbar ul li a:hover {
-  background-color: #fdde6e;
-}
-
-/* line 113, sass/style.scss */
+/* line 110, sass/style.scss */
 .main h3 {
   margin-top: 0;
   padding-bottom: 4px;
@@ -116,99 +116,162 @@ nav ul li.faq a:before {
   font-size: 1.1em;
   font-weight: bold;
 }
-/* line 119, sass/style.scss */
+/* line 116, sass/style.scss */
 .main h3 i {
   padding-right: 0.3em;
   font-size: 1.3em;
 }
-/* line 124, sass/style.scss */
+/* line 121, sass/style.scss */
 .main .btn {
   margin-top: 1em;
 }
-/* line 129, sass/style.scss */
+/* line 126, sass/style.scss */
 .main section .thumbnail img {
   margin-top: 4px;
 }
-/* line 133, sass/style.scss */
+/* line 130, sass/style.scss */
 .main section .img-box {
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
-/* line 135, sass/style.scss */
+/* line 132, sass/style.scss */
 .main section .img-box img {
   margin-top: 4px;
   margin-right: auto;
   margin-left: auto;
 }
-/* line 143, sass/style.scss */
+/* line 140, sass/style.scss */
 .main section .row {
   margin-bottom: 40px;
 }
-/* line 146, sass/style.scss */
-.main section .mobile-box {
-  margin: 4px;
-  margin-bottom: 20px;
-  padding: 4px;
-  padding-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
 
-/* line 158, sass/style.scss */
+/* line 147, sass/style.scss */
 .mvno_info dl dt, .mvno_info dl dd {
   float: left;
   line-height: 1.8;
 }
-/* line 162, sass/style.scss */
+/* line 151, sass/style.scss */
 .mvno_info dl dt {
   width: 30%;
   clear: both;
 }
-/* line 166, sass/style.scss */
+/* line 155, sass/style.scss */
 .mvno_info dl dd {
   width: 70%;
 }
-/* line 172, sass/style.scss */
+/* line 161, sass/style.scss */
 .mvno_info table tr th, .mvno_info table tr td {
   padding: 5px;
   text-align: center;
 }
-/* line 176, sass/style.scss */
+/* line 165, sass/style.scss */
 .mvno_info table tr .tbl_group {
   background-color: #eee;
   text-align: left;
   padding-left: 5em;
 }
 
-/* line 185, sass/style.scss */
+/* line 174, sass/style.scss */
 aside h3 {
   padding: 12px;
   font-weight: bold;
   font-size: 16px;
   background-color: #eee;
 }
+/* line 180, sass/style.scss */
+aside ul {
+  padding-left: 1em;
+}
+/* line 182, sass/style.scss */
+aside ul li {
+  list-style: none;
+}
+/* line 184, sass/style.scss */
+aside ul li a {
+  font-size: 1.1em;
+  line-height: 2.0;
+}
+/* line 187, sass/style.scss */
+aside ul li a .fa-trophy {
+  color: #fdde6e;
+}
+/* line 188, sass/style.scss */
+aside ul li a .fa-circle-o {
+  color: #fff;
+}
 
-/* line 192, sass/style.scss */
+/* line 193, sass/style.scss */
 footer {
   background-color: #eee;
 }
-/* line 194, sass/style.scss */
+/* line 195, sass/style.scss */
 footer small {
   display: block;
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  /* line 202, sass/style.scss */
-  p {
-    line-height: 2.0;
+/* desktop first at modified only mobile because of using bootstrap */
+@media (max-width: 768px) {
+  /* line 203, sass/style.scss */
+  h1 {
+    font-size: 20px;
   }
 
-  /* line 207, sass/style.scss */
-  .main section .img-box {
-    margin-bottom: 0;
+  /* line 206, sass/style.scss */
+  h2 {
+    font-size: 20px;
   }
-  /* line 210, sass/style.scss */
+
+  /* line 209, sass/style.scss */
+  p {
+    line-height: 1.6;
+  }
+
+  /* line 212, sass/style.scss */
+  header {
+    position: relative;
+  }
+  /* line 213, sass/style.scss */
+  header .logo {
+    font-size: 20px;
+  }
+  /* line 217, sass/style.scss */
+  header button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 4px;
+    font-size: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #666;
+  }
+  /* line 227, sass/style.scss */
+  header button i.fa-bars {
+    display: block;
+    font-size: 20px;
+  }
+  /* line 231, sass/style.scss */
+  header button:hover {
+    background-color: #eee;
+  }
+
+  /* line 236, sass/style.scss */
+  .nav_wrap {
+    display: none;
+  }
+
+  /* line 241, sass/style.scss */
+  .main section .img-box {
+    margin-bottom: 1em;
+  }
+  /* line 244, sass/style.scss */
   .main section .mobile-box {
-    border: none;
+    margin: 4px;
+    margin-bottom: 20px;
+    padding: 4px;
+    padding-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
   }
 }

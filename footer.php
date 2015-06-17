@@ -21,6 +21,13 @@
         <small>Copyright &copy; 2015 <?php bloginfo( 'name' ); ?> All Rights Reserved.</small>
     </div>
 </footer>
+<script>
+jQuery(function(){
+    jQuery( '#button' ).on( 'click', function(){
+        jQuery( '.nav_wrap' ).slideToggle();
+    });
+});
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -1,10 +1,12 @@
+@charset "UTF-8";
 /*
  Theme Name: sim toku
  Description: sim toku
  Author URI: http://akkagi.info
 */
-/* line 21, sass/style.scss */
+/* line 26, sass/style.scss */
 h1 {
+  margin-bottom: 1em;
   padding: 10px 20px;
   border-left: 4px solid #fdde6e;
   border-bottom: 4px solid #fdde6e;
@@ -14,14 +16,14 @@ h1 {
   color: #555;
 }
 
-/* line 30, sass/style.scss */
+/* line 36, sass/style.scss */
 h2 {
   padding: 10px 0;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #444;
 }
-/* line 35, sass/style.scss */
+/* line 41, sass/style.scss */
 h2:before {
   padding-right: 0.3em;
   font-family: FontAwesome;
@@ -31,21 +33,27 @@ h2:before {
   color: #fdde6e;
 }
 
-/* line 46, sass/style.scss */
+/* line 52, sass/style.scss */
 p {
   line-height: 2.0;
+  font-size: 16px;
 }
 
-/* line 49, sass/style.scss */
+/* line 56, sass/style.scss */
+a {
+  color: #635ab0;
+}
+
+/* line 59, sass/style.scss */
 a > img:hover {
   opacity: 0.8;
 }
 
-/* line 52, sass/style.scss */
+/* line 62, sass/style.scss */
 header {
   overflow: hidden;
 }
-/* line 54, sass/style.scss */
+/* line 64, sass/style.scss */
 header .logo {
   margin-top: 20px;
   padding-left: 0;
@@ -55,60 +63,80 @@ header .logo {
   border: none;
 }
 
-/* line 63, sass/style.scss */
+/* line 73, sass/style.scss */
 .nav_wrap {
   border-bottom: 5px solid #fdde6e;
 }
-/* line 65, sass/style.scss */
+/* line 75, sass/style.scss */
 .nav_wrap nav {
   /* nav icon */
 }
-/* line 66, sass/style.scss */
+/* line 76, sass/style.scss */
 .nav_wrap nav.navbar-default {
   margin-bottom: 0;
   background-color: #fff;
   border: none;
 }
-/* line 70, sass/style.scss */
+/* line 80, sass/style.scss */
 .nav_wrap nav.navbar-default .navbar-nav > li > a {
   font-size: 1.1em;
   font-weight: bold;
   color: #333;
 }
-/* line 83, sass/style.scss */
+/* line 84, sass/style.scss */
+.nav_wrap nav.navbar-default .navbar-nav > li > a:hover {
+  border-bottom: 5px solid #c09703;
+  margin-bottom: -5px;
+}
+/* line 94, sass/style.scss */
 .nav_wrap nav ul li a:before {
   padding-right: 0.3em;
   font-family: FontAwesome;
   font-weight: normal;
   font-size: 1.3em;
 }
-/* line 91, sass/style.scss */
+/* line 102, sass/style.scss */
 .nav_wrap nav ul li.info a:before {
   content: "\f044";
 }
-/* line 92, sass/style.scss */
+/* line 103, sass/style.scss */
 .nav_wrap nav ul li.plan a:before {
   content: "\f115";
 }
-/* line 93, sass/style.scss */
+/* line 104, sass/style.scss */
 .nav_wrap nav ul li.mobile a:before {
   content: "\f10b";
 }
-/* line 94, sass/style.scss */
+/* line 105, sass/style.scss */
 .nav_wrap nav ul li.guide a:before {
   content: "\f087";
 }
-/* line 95, sass/style.scss */
+/* line 106, sass/style.scss */
 .nav_wrap nav ul li.faq a:before {
   content: "\f0e5";
 }
 
-/* line 105, sass/style.scss */
+/* line 115, sass/style.scss */
+.img_main p {
+  padding: 0px 0 5px 1em;
+  font-size: 24px;
+  line-height: 1.0;
+}
+/* line 120, sass/style.scss */
+.img_main .p_first {
+  margin-top: 60px;
+}
+
+/* line 124, sass/style.scss */
 .breadcrumb {
   background-color: #fff;
 }
 
-/* line 110, sass/style.scss */
+/* line 131, sass/style.scss */
+.main {
+  margin-bottom: 2em;
+}
+/* line 133, sass/style.scss */
 .main h3 {
   margin-top: 0;
   padding-bottom: 4px;
@@ -116,128 +144,263 @@ header .logo {
   font-size: 1.1em;
   font-weight: bold;
 }
-/* line 116, sass/style.scss */
+/* line 139, sass/style.scss */
 .main h3 i {
   padding-right: 0.3em;
   font-size: 1.3em;
 }
-/* line 121, sass/style.scss */
+/* line 144, sass/style.scss */
 .main .btn {
   margin-top: 1em;
 }
-/* line 126, sass/style.scss */
+/* line 148, sass/style.scss */
+.main section ul {
+  padding-left: 1em;
+}
+/* line 150, sass/style.scss */
+.main section ul li {
+  padding: 5px 0;
+  list-style: none;
+  font-size: 16px;
+}
+/* line 154, sass/style.scss */
+.main section ul li i.fa {
+  padding-right: 0.4em;
+  font-size: 30px;
+  color: #fdde6e;
+  vertical-align: bottom;
+}
+/* line 163, sass/style.scss */
 .main section .thumbnail img {
   margin-top: 4px;
 }
-/* line 130, sass/style.scss */
+/* line 167, sass/style.scss */
 .main section .img-box {
   margin-bottom: 0;
 }
-/* line 132, sass/style.scss */
+/* line 169, sass/style.scss */
 .main section .img-box img {
   margin-top: 4px;
   margin-right: auto;
   margin-left: auto;
 }
-/* line 140, sass/style.scss */
+/* line 177, sass/style.scss */
 .main section .row {
   margin-bottom: 40px;
 }
 
-/* line 147, sass/style.scss */
+/* line 188, sass/style.scss */
+.info .main ul li,
+.plan .main ul li,
+.mobile .main ul li,
+.guide .main ul li,
+.faq .main ul li {
+  margin-bottom: 1em;
+  list-style: none;
+  font-size: 16px;
+}
+/* line 192, sass/style.scss */
+.info .main ul li:before,
+.plan .main ul li:before,
+.mobile .main ul li:before,
+.guide .main ul li:before,
+.faq .main ul li:before {
+  padding-right: 0.5em;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: 1.3em;
+  content: "\f0f6";
+  color: #635ab0;
+}
+
+/*
+ * short codeの出力成形用
+ */
+/* line 209, sass/style.scss */
 .mvno_info dl dt, .mvno_info dl dd {
   float: left;
   line-height: 1.8;
 }
-/* line 151, sass/style.scss */
+/* line 213, sass/style.scss */
 .mvno_info dl dt {
   width: 30%;
   clear: both;
 }
-/* line 155, sass/style.scss */
+/* line 217, sass/style.scss */
 .mvno_info dl dd {
   width: 70%;
 }
-/* line 161, sass/style.scss */
+/* line 223, sass/style.scss */
 .mvno_info table tr th, .mvno_info table tr td {
   padding: 5px;
   text-align: center;
 }
-/* line 165, sass/style.scss */
+/* line 227, sass/style.scss */
 .mvno_info table tr .tbl_group {
   background-color: #eee;
   text-align: left;
   padding-left: 5em;
 }
 
-/* line 174, sass/style.scss */
+/* line 235, sass/style.scss */
+aside {
+  margin-bottom: 2em;
+}
+/* line 237, sass/style.scss */
 aside h3 {
   padding: 12px;
   font-weight: bold;
   font-size: 16px;
   background-color: #eee;
 }
-/* line 180, sass/style.scss */
+/* line 243, sass/style.scss */
 aside ul {
   padding-left: 1em;
 }
-/* line 182, sass/style.scss */
+/* line 245, sass/style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 184, sass/style.scss */
+/* line 247, sass/style.scss */
 aside ul li a {
   font-size: 1.1em;
   line-height: 2.0;
 }
-/* line 187, sass/style.scss */
+/* line 250, sass/style.scss */
 aside ul li a .fa-trophy {
   color: #fdde6e;
 }
-/* line 188, sass/style.scss */
+/* line 251, sass/style.scss */
 aside ul li a .fa-circle-o {
   color: #fff;
 }
 
-/* line 193, sass/style.scss */
+/* line 256, sass/style.scss */
 footer {
+  padding: 1em 0;
   background-color: #eee;
 }
-/* line 195, sass/style.scss */
+/* line 259, sass/style.scss */
+footer ul {
+  clear: both;
+  margin: 16px 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 264, sass/style.scss */
+footer ul li {
+  display: inline-block;
+  padding-top: 10px;
+  list-style: none;
+}
+/* line 268, sass/style.scss */
+footer ul li a {
+  margin: 5px 30px;
+  font-size: 14px;
+  color: #333;
+}
+/* line 272, sass/style.scss */
+footer ul li a:hover {
+  text-decoration: none;
+  color: #777;
+  border-bottom: 1px solid #777;
+}
+/* line 280, sass/style.scss */
 footer small {
   display: block;
+  margin-bottom: 30px;
+  padding-top: 20px;
   text-align: center;
+  color: #999;
+}
+
+/*
+ * about page
+ */
+/* line 292, sass/style.scss */
+.about dl {
+  overflow: hidden;
+}
+/* line 294, sass/style.scss */
+.about dl dt, .about dl dd {
+  float: left;
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+/* line 299, sass/style.scss */
+.about dl dt {
+  clear: both;
+  width: 20%;
+  padding-left: 1%;
+}
+/* line 304, sass/style.scss */
+.about dl dd {
+  width: 75%;
+  padding-left: 4%;
+}
+
+/*
+ * faq page
+ */
+/* line 315, sass/style.scss */
+.faq dl dt {
+  padding-left: 1em;
+}
+/* line 317, sass/style.scss */
+.faq dl dt:before {
+  padding-right: 0.3em;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: 1.4em;
+  content: "\f059";
+  color: #8982CC;
+}
+/* line 326, sass/style.scss */
+.faq dl dd {
+  margin-bottom: 2em;
+  padding-left: 1em;
+  line-height: 1.8;
+}
+/* line 330, sass/style.scss */
+.faq dl dd:before {
+  padding-right: 0.3em;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: 1.2em;
+  content: "\f118";
+  color: #fd6e70;
 }
 
 /* desktop first at modified only mobile because of using bootstrap */
-@media (max-width: 768px) {
-  /* line 203, sass/style.scss */
+@media (max-width: 767px) {
+  /* line 343, sass/style.scss */
   h1 {
     font-size: 20px;
   }
 
-  /* line 206, sass/style.scss */
+  /* line 346, sass/style.scss */
   h2 {
     font-size: 20px;
   }
 
-  /* line 209, sass/style.scss */
+  /* line 349, sass/style.scss */
   p {
     line-height: 1.6;
+    font-size: 14px;
   }
 
-  /* line 212, sass/style.scss */
+  /* line 353, sass/style.scss */
   header {
     position: relative;
   }
-  /* line 213, sass/style.scss */
+  /* line 354, sass/style.scss */
   header .logo {
     font-size: 20px;
   }
-  /* line 217, sass/style.scss */
+  /* line 358, sass/style.scss */
   header button {
     position: absolute;
-    top: 1em;
+    top: 4px;
     right: 1em;
     padding: 4px;
     font-size: 10px;
@@ -246,26 +409,35 @@ footer small {
     background-color: #fff;
     color: #666;
   }
-  /* line 227, sass/style.scss */
+  /* line 368, sass/style.scss */
   header button i.fa-bars {
     display: block;
     font-size: 20px;
   }
-  /* line 231, sass/style.scss */
+  /* line 372, sass/style.scss */
   header button:hover {
     background-color: #eee;
   }
 
-  /* line 236, sass/style.scss */
+  /* line 377, sass/style.scss */
   .nav_wrap {
     display: none;
   }
 
-  /* line 241, sass/style.scss */
+  /* line 381, sass/style.scss */
+  .img_main p {
+    font-size: 14px;
+  }
+  /* line 384, sass/style.scss */
+  .img_main .p_first {
+    margin-top: 1em;
+  }
+
+  /* line 390, sass/style.scss */
   .main section .img-box {
     margin-bottom: 1em;
   }
-  /* line 244, sass/style.scss */
+  /* line 393, sass/style.scss */
   .main section .mobile-box {
     margin: 4px;
     margin-bottom: 20px;
@@ -273,5 +445,22 @@ footer small {
     padding-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
+  }
+
+  /* line 408, sass/style.scss */
+  .info .main ul,
+  .plan .main ul,
+  .mobile .main ul,
+  .guide .main ul,
+  .faq .main ul {
+    padding-left: 1em;
+  }
+  /* line 410, sass/style.scss */
+  .info .main ul li,
+  .plan .main ul li,
+  .mobile .main ul li,
+  .guide .main ul li,
+  .faq .main ul li {
+    font-size: 14px;
   }
 }

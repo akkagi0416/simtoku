@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body class="<?php echo $post->post_name; ?>">
         <header>
             <div class="container">
 <?php
@@ -47,22 +47,21 @@
     wp_nav_menu( $args );
 ?>
             </div>
-        </div>
+        </div><!-- //.nav_wrap -->
         <div class="img_main">
             <div class="container">
                 <!--
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>格安SIMで毎月5,000円のお得なスマホ生活</h2>
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-4">
-                        <img src="<?php bloginfo( 'template_url' ); ?>/img/fotolia_67461371.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-md-1"></div>
-                </div>
-                -->
                 <img src="<?php bloginfo( 'template_url' ); ?>/img/main.png" alt="" class="img-responsive">
+                -->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p class="p_first">毎月5000円お得!?</p>
+                        <p class="p_second">　そう、格安SIMならね</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <img src="<?php bloginfo( 'template_url' ); ?>/img/main_3.png" alt="" class="img-responsive">
+                    </div>
+                </div>
             </div>
         </div>
 <?php

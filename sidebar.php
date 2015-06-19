@@ -1,6 +1,6 @@
 <div class="col-md-4">
     <aside>
-        <h3>格安SIMランキング</h3>
+        <h3>格安SIM 格安ランキング</h3>
         <ul>
             <li><a href="#"><i class="fa fa-trophy fa-fw fa-2x"></i> 1位 660円 DMM mobile</a></li>
             <li><a href="#"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 IIJmio</a></li>

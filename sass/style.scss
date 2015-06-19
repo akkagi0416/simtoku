@@ -17,8 +17,14 @@
 
 // $color_main : #fed232;
 $color_main : #fdde6e;
+// $color_blue : #6e75fd;  // blue
+$color_blue : #635ab0;  // blue
+$color_blue_light : #8982CC;    // blue light for dark icon
+$color_red  : #fd6e70;  // red
+
 
 h1{
+    margin-bottom: 1em;
     padding: 10px 20px;
     border-left: 4px solid $color_main;
     border-bottom: 4px solid $color_main;
@@ -29,7 +35,7 @@ h1{
 }
 h2{
     padding: 10px 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #444;
     &:before{
@@ -45,6 +51,10 @@ h2{
 }
 p{
     line-height: 2.0;
+    font-size: 16px;
+}
+a{
+    color: $color_blue;
 }
 a>img:hover{
     opacity: 0.8;
@@ -72,7 +82,8 @@ header{
                 font-weight: bold;
                 color: #333;
                 &:hover{
-                    // font-weight: bold;
+                    border-bottom: 5px solid darken( $color_main, 33% );
+                    margin-bottom: -5px;
                 }
             }
         }
@@ -101,12 +112,24 @@ header{
     // height: 200px;
     // background-color: $color_main;
     // box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
+    p{
+        padding: 0px 0 5px 1em;
+        font-size: 24px;
+        line-height: 1.0;
+    }
+    .p_first{
+        margin-top: 60px;
+    }
 }
 .breadcrumb{
     background-color: #fff;
 }
 
+.contents{
+    // margin-bottom: 2em;
+}
 .main{
+    margin-bottom: 2em;
     h3{
         margin-top: 0;
         padding-bottom: 4px;
@@ -122,6 +145,20 @@ header{
         margin-top: 1em;
     }
     section{
+        ul{
+            padding-left: 1em;
+            li{
+                padding: 5px 0;
+                list-style: none;
+                font-size: 16px;
+                i.fa{
+                    padding-right: 0.4em;
+                    font-size: 30px;
+                    color: $color_main;
+                    vertical-align: bottom;
+                }
+            }
+        }
         .thumbnail{
             img{
                 margin-top: 4px;
@@ -142,6 +179,31 @@ header{
         }
     }
 }
+.info .main,
+.plan .main,
+.mobile .main,
+.guide .main,
+.faq .main{
+    ul{
+        li{
+            margin-bottom: 1em;
+            list-style: none;
+            font-size: 16px;
+            &:before{
+                padding-right: 0.5em;
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-size: 1.3em;
+                // content: "\f15c";   // file-text
+                content: "\f0f6";   // file-text-o
+                color: $color_blue;
+            }
+        }
+    }
+}
+/*
+ * short codeの出力成形用
+ */
 .mvno_info{
     dl{
         dt,dd{
@@ -171,6 +233,7 @@ header{
     }
 }
 aside{
+    margin-bottom: 2em;
     h3{
         padding: 12px;
         font-weight: bold;
@@ -191,15 +254,92 @@ aside{
     }
 }
 footer{
+    padding: 1em 0;
     background-color: #eee;
+    ul{
+        clear: both;
+        margin: 16px 0;
+        padding: 0;
+        text-align: center;
+        li{
+            display: inline-block;
+            padding-top: 10px;
+            list-style: none;
+            a{
+                margin: 5px 30px;
+                font-size: 14px;
+                color: #333;
+                &:hover{
+                    text-decoration: none;
+                    color: #777;
+                    border-bottom: 1px solid #777;
+                }
+            }
+        }
+    }
     small{
         display: block;
+        margin-bottom: 30px;
+        padding-top: 20px;
         text-align: center;
+        color: #999;
     }
 }
-
+/*
+ * about page
+ */
+.about{
+    dl{
+        overflow: hidden;
+        dt,dd{
+            float: left;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+        dt{
+            clear: both;
+            width: 20%;
+            padding-left: 1%;
+        }
+        dd{
+            width: 75%;
+            padding-left: 4%;
+        }
+    }
+}
+/*
+ * faq page
+ */
+.faq{
+    dl{
+        dt{
+            padding-left: 1em;
+            &:before{
+                padding-right: 0.3em;
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-size: 1.4em;
+                content: "\f059";   // question-circle
+                color: $color_blue_light;
+            }
+        }
+        dd{
+            margin-bottom: 2em;
+            padding-left: 1em;
+            line-height: 1.8;
+            &:before{
+                padding-right: 0.3em;
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-size: 1.2em;
+                content: "\f118";   // smile-o
+                color: $color_red;
+            }
+        }
+    }
+}
 /* desktop first at modified only mobile because of using bootstrap */
-@media (max-width: 768px){
+@media (max-width: 767px){
     h1{
         font-size: 20px;
     }
@@ -208,6 +348,7 @@ footer{
     }
     p{
         line-height: 1.6;
+        font-size: 14px;
     }
     header{
         .logo{
@@ -216,7 +357,7 @@ footer{
         position: relative;
         button{
             position: absolute;
-            top: 1em;
+            top: 4px;
             right: 1em;
             padding: 4px;
             font-size: 10px;
@@ -236,6 +377,14 @@ footer{
     .nav_wrap{
         display: none;
     }
+    .img_main{
+        p{
+            font-size: 14px;
+        }
+        .p_first{
+            margin-top: 1em;
+        }
+    }
     .main{
         section{
             .img-box{
@@ -248,6 +397,18 @@ footer{
                 padding-bottom: 20px;
                 border: 1px solid #ddd;
                 border-radius: 4px;
+            }
+        }
+    }
+    .info .main,
+    .plan .main,
+    .mobile .main,
+    .guide .main,
+    .faq .main{
+        ul{
+            padding-left: 1em;
+            li{
+                font-size: 14px;
             }
         }
     }

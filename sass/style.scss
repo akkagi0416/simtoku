@@ -22,6 +22,18 @@ $color_blue : #635ab0;  // blue
 $color_blue_light : #8982CC;    // blue light for dark icon
 $color_red  : #fd6e70;  // red
 
+%fontawesome{
+    padding-right: 0.4em;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
+@mixin col-sm{
+    @media (max-width: 767px){
+        @content;
+    }
+}
 
 h1{
     margin-bottom: 1em;
@@ -32,17 +44,20 @@ h1{
     font-size: 24px;
     font-weight: bold;
     color: #555;
+    @include col-sm{
+        font-size: 20px;
+    }
 }
 h2{
     padding: 10px 0;
     font-size: 20px;
     font-weight: bold;
     color: #444;
+    @include col-sm{
+        font-size: 20px;
+    }
     &:before{
-        padding-right: 0.3em;
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-size: 1.3em;
+        @extend %fontawesome;
         content: "\f14a";   // check-square
         // content: "\f046";   // check-square-o
         // content: "\f024";   // flag
@@ -52,6 +67,10 @@ h2{
 p{
     line-height: 1.8;
     font-size: 16px;
+    @include col-sm{
+        line-height: 1.6;
+        font-size: 14px;
+    }
 }
 a{
     color: $color_blue;
@@ -61,6 +80,27 @@ a>img:hover{
 }
 header{
     overflow: hidden;
+    @include col-sm{
+        position: relative;
+        button{
+            position: absolute;
+            top: 4px;
+            right: 1em;
+            padding: 4px;
+            font-size: 10px;
+            border-radius: 4px; 
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #666;
+            i.fa-bars{
+                display: block;
+                font-size: 20px;
+            }
+            &:hover{
+                background-color: #eee;
+            }
+        }
+    }
     .logo{
         margin-top: 20px;
         margin-bottom: 10px;
@@ -69,10 +109,16 @@ header{
         font-size: 24px;
         font-weight: bold;
         border: none;
+        @include col-sm{
+            font-size: 20px;
+        }
     }
 }
 .nav_wrap{
     border-bottom: 5px solid $color_main;
+    @include col-sm{
+        display: none;
+    }
     nav{
         &.navbar-default{
             margin-bottom: 0;
@@ -93,11 +139,7 @@ header{
             li{
                 a{
                     &:before{
-                        // display: block;
-                        padding-right: 0.3em;
-                        font-family: FontAwesome;
-                        font-weight: normal;
-                        font-size: 1.3em;
+                        @extend %fontawesome;
                     }
                 }
                 &.info      a:before{ content: "\f044"; }   // pencil-square-o
@@ -112,16 +154,19 @@ header{
     }
 }
 .img_main{
-    // height: 200px;
-    // background-color: $color_main;
-    // box-shadow: 0 3px 3px rgba(50,50,50,0.1) inset;
     p{
         padding: 0px 0 5px 1em;
         font-size: 24px;
         line-height: 1.0;
+        @include col-sm{
+            font-size: 14px;
+        }
     }
     .p_first{
         margin-top: 60px;
+        @include col-sm{
+            margin-top: 1em;
+        }
     }
 }
 .breadcrumb{
@@ -169,12 +214,25 @@ header{
         }
         .img-box{
             margin-bottom: 0;
+            @include col-sm{
+                margin-bottom: 1em;
+            }
             img{
                 margin-top: 4px;
                 margin-right: auto;
                 margin-left: auto;
                 // @include box-shadow(1px 1px 3px #ccc);
                 // box-shadow: 1px 1px 3px #ccc;
+            }
+        }
+        .mobile-box{
+            @include col-sm{
+                margin: 4px;
+                margin-bottom: 20px;
+                padding: 4px;
+                padding-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
             }
         }
         .row{
@@ -189,14 +247,18 @@ header{
 .faq .main,
 .technic .main{
     ul{
+        @include col-sm{
+            padding-left: 1em;
+        }
         li{
             margin-bottom: 12px;
             list-style: none;
             font-size: 16px;
+            @include col-sm{
+                padding-left: 14px;
+            }
             &:before{
-                padding-right: 0.5em;
-                font-family: FontAwesome;
-                font-weight: normal;
+                @extend %fontawesome;
                 font-size: 1.2em;
                 // content: "\f15c";   // file-text
                 content: "\f0f6";   // file-text-o
@@ -319,10 +381,7 @@ footer{
         dt{
             padding-left: 1em;
             &:before{
-                padding-right: 0.3em;
-                font-family: FontAwesome;
-                font-weight: normal;
-                font-size: 1.4em;
+                @extend %fontawesome;
                 content: "\f059";   // question-circle
                 color: $color_blue_light;
             }
@@ -332,10 +391,7 @@ footer{
             padding-left: 1em;
             line-height: 1.8;
             &:before{
-                padding-right: 0.3em;
-                font-family: FontAwesome;
-                font-weight: normal;
-                font-size: 1.2em;
+                @extend %fontawesome;
                 content: "\f118";   // smile-o
                 color: $color_red;
             }
@@ -344,77 +400,5 @@ footer{
 }
 /* desktop first at modified only mobile because of using bootstrap */
 @media (max-width: 767px){
-    h1{
-        font-size: 20px;
-    }
-    h2{
-        font-size: 20px;
-    }
-    p{
-        line-height: 1.6;
-        font-size: 14px;
-    }
-    header{
-        .logo{
-            font-size: 20px;
-        }
-        position: relative;
-        button{
-            position: absolute;
-            top: 4px;
-            right: 1em;
-            padding: 4px;
-            font-size: 10px;
-            border-radius: 4px; 
-            border: 1px solid #ccc;
-            background-color: #fff;
-            color: #666;
-            i.fa-bars{
-                display: block;
-                font-size: 20px;
-            }
-            &:hover{
-                background-color: #eee;
-            }
-        }
-    }
-    .nav_wrap{
-        display: none;
-    }
-    .img_main{
-        p{
-            font-size: 14px;
-        }
-        .p_first{
-            margin-top: 1em;
-        }
-    }
-    .main{
-        section{
-            .img-box{
-                margin-bottom: 1em;
-            }
-            .mobile-box{
-                margin: 4px;
-                margin-bottom: 20px;
-                padding: 4px;
-                padding-bottom: 20px;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-        }
-    }
-    .info .main,
-    .plan .main,
-    .mobile .main,
-    .guide .main,
-    .faq .main,
-    .technic .main{
-        ul{
-            padding-left: 1em;
-            li{
-                font-size: 14px;
-            }
-        }
-    }
+    /* use @content in sass */
 }

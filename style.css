@@ -4,7 +4,20 @@
  Description: sim toku
  Author URI: http://akkagi.info
 */
-/* line 26, sass/style.scss */
+/* line 25, sass/style.scss */
+h2:before, .nav_wrap nav ul li a:before, .info .main ul li:before,
+.plan .main ul li:before,
+.mobile .main ul li:before,
+.guide .main ul li:before,
+.faq .main ul li:before,
+.technic .main ul li:before, .faq dl dt:before, .faq dl dd:before {
+  padding-right: 0.4em;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+/* line 38, sass/style.scss */
 h1 {
   margin-bottom: 1em;
   padding: 10px 20px;
@@ -15,396 +28,65 @@ h1 {
   font-weight: bold;
   color: #555;
 }
+@media (max-width: 767px) {
+  /* line 38, sass/style.scss */
+  h1 {
+    font-size: 20px;
+  }
+}
 
-/* line 36, sass/style.scss */
+/* line 51, sass/style.scss */
 h2 {
   padding: 10px 0;
   font-size: 20px;
   font-weight: bold;
   color: #444;
 }
-/* line 41, sass/style.scss */
+@media (max-width: 767px) {
+  /* line 51, sass/style.scss */
+  h2 {
+    font-size: 20px;
+  }
+}
+/* line 59, sass/style.scss */
 h2:before {
-  padding-right: 0.3em;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-size: 1.3em;
   content: "\f14a";
   color: #fdde6e;
 }
 
-/* line 52, sass/style.scss */
+/* line 67, sass/style.scss */
 p {
   line-height: 1.8;
   font-size: 16px;
 }
-
-/* line 56, sass/style.scss */
-a {
-  color: #635ab0;
-}
-
-/* line 59, sass/style.scss */
-a > img:hover {
-  opacity: 0.8;
-}
-
-/* line 62, sass/style.scss */
-header {
-  overflow: hidden;
-}
-/* line 64, sass/style.scss */
-header .logo {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding: 0;
-  line-height: 1.1;
-  font-size: 24px;
-  font-weight: bold;
-  border: none;
-}
-
-/* line 74, sass/style.scss */
-.nav_wrap {
-  border-bottom: 5px solid #fdde6e;
-}
-/* line 76, sass/style.scss */
-.nav_wrap nav {
-  /* nav icon */
-}
-/* line 77, sass/style.scss */
-.nav_wrap nav.navbar-default {
-  margin-bottom: 0;
-  background-color: #fff;
-  border: none;
-}
-/* line 81, sass/style.scss */
-.nav_wrap nav.navbar-default .navbar-nav > li > a {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #333;
-}
-/* line 85, sass/style.scss */
-.nav_wrap nav.navbar-default .navbar-nav > li > a:hover {
-  border-bottom: 5px solid #c09703;
-  margin-bottom: -5px;
-}
-/* line 95, sass/style.scss */
-.nav_wrap nav ul li a:before {
-  padding-right: 0.3em;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-size: 1.3em;
-}
-/* line 103, sass/style.scss */
-.nav_wrap nav ul li.info a:before {
-  content: "\f044";
-}
-/* line 104, sass/style.scss */
-.nav_wrap nav ul li.plan a:before {
-  content: "\f115";
-}
-/* line 105, sass/style.scss */
-.nav_wrap nav ul li.mobile a:before {
-  content: "\f10b";
-}
-/* line 107, sass/style.scss */
-.nav_wrap nav ul li.guide a:before {
-  content: "\f15d";
-}
-/* line 108, sass/style.scss */
-.nav_wrap nav ul li.faq a:before {
-  content: "\f0e5";
-}
-/* line 109, sass/style.scss */
-.nav_wrap nav ul li.technic a:before {
-  content: "\f0ad";
-}
-
-/* line 118, sass/style.scss */
-.img_main p {
-  padding: 0px 0 5px 1em;
-  font-size: 24px;
-  line-height: 1.0;
-}
-/* line 123, sass/style.scss */
-.img_main .p_first {
-  margin-top: 60px;
-}
-
-/* line 127, sass/style.scss */
-.breadcrumb {
-  background-color: #fff;
-}
-
-/* line 134, sass/style.scss */
-.main {
-  margin-bottom: 2em;
-}
-/* line 136, sass/style.scss */
-.main h3 {
-  margin-top: 0;
-  padding-bottom: 4px;
-  border-bottom: 2px solid #fdde6e;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-/* line 142, sass/style.scss */
-.main h3 i {
-  padding-right: 0.3em;
-  font-size: 1.3em;
-}
-/* line 147, sass/style.scss */
-.main .btn {
-  margin-top: 1em;
-}
-/* line 151, sass/style.scss */
-.main section ul {
-  padding-left: 1em;
-}
-/* line 153, sass/style.scss */
-.main section ul li {
-  padding: 5px 0;
-  list-style: none;
-  font-size: 16px;
-}
-/* line 157, sass/style.scss */
-.main section ul li i.fa {
-  padding-right: 0.4em;
-  font-size: 30px;
-  color: #fdde6e;
-  vertical-align: bottom;
-}
-/* line 166, sass/style.scss */
-.main section .thumbnail img {
-  margin-top: 4px;
-}
-/* line 170, sass/style.scss */
-.main section .img-box {
-  margin-bottom: 0;
-}
-/* line 172, sass/style.scss */
-.main section .img-box img {
-  margin-top: 4px;
-  margin-right: auto;
-  margin-left: auto;
-}
-/* line 180, sass/style.scss */
-.main section .row {
-  margin-bottom: 40px;
-}
-
-/* line 192, sass/style.scss */
-.info .main ul li,
-.plan .main ul li,
-.mobile .main ul li,
-.guide .main ul li,
-.faq .main ul li,
-.technic .main ul li {
-  margin-bottom: 12px;
-  list-style: none;
-  font-size: 16px;
-}
-/* line 196, sass/style.scss */
-.info .main ul li:before,
-.plan .main ul li:before,
-.mobile .main ul li:before,
-.guide .main ul li:before,
-.faq .main ul li:before,
-.technic .main ul li:before {
-  padding-right: 0.5em;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-size: 1.2em;
-  content: "\f0f6";
-  color: #635ab0;
-}
-
-/*
- * short codeの出力成形用
- */
-/* line 213, sass/style.scss */
-.mvno_info dl dt, .mvno_info dl dd {
-  float: left;
-  line-height: 1.8;
-}
-/* line 217, sass/style.scss */
-.mvno_info dl dt {
-  width: 30%;
-  clear: both;
-}
-/* line 221, sass/style.scss */
-.mvno_info dl dd {
-  width: 70%;
-}
-/* line 227, sass/style.scss */
-.mvno_info table tr th, .mvno_info table tr td {
-  padding: 5px;
-  text-align: center;
-}
-/* line 231, sass/style.scss */
-.mvno_info table tr .tbl_group {
-  background-color: #eee;
-  text-align: left;
-  padding-left: 5em;
-}
-
-/* line 239, sass/style.scss */
-aside {
-  margin-bottom: 2em;
-}
-/* line 241, sass/style.scss */
-aside h3 {
-  padding: 12px;
-  font-weight: bold;
-  font-size: 16px;
-  background-color: #eee;
-}
-/* line 247, sass/style.scss */
-aside ul {
-  padding-left: 1em;
-}
-/* line 249, sass/style.scss */
-aside ul li {
-  list-style: none;
-}
-/* line 251, sass/style.scss */
-aside ul li a {
-  font-size: 1.1em;
-  line-height: 2.0;
-}
-/* line 254, sass/style.scss */
-aside ul li a .fa-trophy {
-  color: #fdde6e;
-}
-/* line 255, sass/style.scss */
-aside ul li a .fa-circle-o {
-  color: #fff;
-}
-
-/* line 260, sass/style.scss */
-footer {
-  padding: 1em 0;
-  background-color: #eee;
-}
-/* line 263, sass/style.scss */
-footer ul {
-  clear: both;
-  margin: 16px 0;
-  padding: 0;
-  text-align: center;
-}
-/* line 268, sass/style.scss */
-footer ul li {
-  display: inline-block;
-  padding-top: 10px;
-  list-style: none;
-}
-/* line 272, sass/style.scss */
-footer ul li a {
-  margin: 5px 30px;
-  font-size: 14px;
-  color: #333;
-}
-/* line 276, sass/style.scss */
-footer ul li a:hover {
-  text-decoration: none;
-  color: #777;
-  border-bottom: 1px solid #777;
-}
-/* line 284, sass/style.scss */
-footer small {
-  display: block;
-  margin-bottom: 30px;
-  padding-top: 20px;
-  text-align: center;
-  color: #999;
-}
-
-/*
- * about page
- */
-/* line 296, sass/style.scss */
-.about dl {
-  overflow: hidden;
-}
-/* line 298, sass/style.scss */
-.about dl dt, .about dl dd {
-  float: left;
-  margin-bottom: 1em;
-  line-height: 1.8;
-}
-/* line 303, sass/style.scss */
-.about dl dt {
-  clear: both;
-  width: 20%;
-  padding-left: 1%;
-}
-/* line 308, sass/style.scss */
-.about dl dd {
-  width: 75%;
-  padding-left: 4%;
-}
-
-/*
- * faq page
- */
-/* line 319, sass/style.scss */
-.faq dl dt {
-  padding-left: 1em;
-}
-/* line 321, sass/style.scss */
-.faq dl dt:before {
-  padding-right: 0.3em;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-size: 1.4em;
-  content: "\f059";
-  color: #8982CC;
-}
-/* line 330, sass/style.scss */
-.faq dl dd {
-  margin-bottom: 2em;
-  padding-left: 1em;
-  line-height: 1.8;
-}
-/* line 334, sass/style.scss */
-.faq dl dd:before {
-  padding-right: 0.3em;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-size: 1.2em;
-  content: "\f118";
-  color: #fd6e70;
-}
-
-/* desktop first at modified only mobile because of using bootstrap */
 @media (max-width: 767px) {
-  /* line 347, sass/style.scss */
-  h1 {
-    font-size: 20px;
-  }
-
-  /* line 350, sass/style.scss */
-  h2 {
-    font-size: 20px;
-  }
-
-  /* line 353, sass/style.scss */
+  /* line 67, sass/style.scss */
   p {
     line-height: 1.6;
     font-size: 14px;
   }
+}
 
-  /* line 357, sass/style.scss */
+/* line 75, sass/style.scss */
+a {
+  color: #635ab0;
+}
+
+/* line 78, sass/style.scss */
+a > img:hover {
+  opacity: 0.8;
+}
+
+/* line 81, sass/style.scss */
+header {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  /* line 81, sass/style.scss */
   header {
     position: relative;
   }
-  /* line 358, sass/style.scss */
-  header .logo {
-    font-size: 20px;
-  }
-  /* line 362, sass/style.scss */
+  /* line 85, sass/style.scss */
   header button {
     position: absolute;
     top: 4px;
@@ -416,35 +98,177 @@ footer small {
     background-color: #fff;
     color: #666;
   }
-  /* line 372, sass/style.scss */
+  /* line 95, sass/style.scss */
   header button i.fa-bars {
     display: block;
     font-size: 20px;
   }
-  /* line 376, sass/style.scss */
+  /* line 99, sass/style.scss */
   header button:hover {
     background-color: #eee;
   }
+}
+/* line 104, sass/style.scss */
+header .logo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0;
+  line-height: 1.1;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+@media (max-width: 767px) {
+  /* line 104, sass/style.scss */
+  header .logo {
+    font-size: 20px;
+  }
+}
 
-  /* line 381, sass/style.scss */
+/* line 117, sass/style.scss */
+.nav_wrap {
+  border-bottom: 5px solid #fdde6e;
+}
+@media (max-width: 767px) {
+  /* line 117, sass/style.scss */
   .nav_wrap {
     display: none;
   }
+}
+/* line 122, sass/style.scss */
+.nav_wrap nav {
+  /* nav icon */
+}
+/* line 123, sass/style.scss */
+.nav_wrap nav.navbar-default {
+  margin-bottom: 0;
+  background-color: #fff;
+  border: none;
+}
+/* line 127, sass/style.scss */
+.nav_wrap nav.navbar-default .navbar-nav > li > a {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
+/* line 131, sass/style.scss */
+.nav_wrap nav.navbar-default .navbar-nav > li > a:hover {
+  border-bottom: 5px solid #c09703;
+  margin-bottom: -5px;
+}
+/* line 145, sass/style.scss */
+.nav_wrap nav ul li.info a:before {
+  content: "\f044";
+}
+/* line 146, sass/style.scss */
+.nav_wrap nav ul li.plan a:before {
+  content: "\f115";
+}
+/* line 147, sass/style.scss */
+.nav_wrap nav ul li.mobile a:before {
+  content: "\f10b";
+}
+/* line 149, sass/style.scss */
+.nav_wrap nav ul li.guide a:before {
+  content: "\f15d";
+}
+/* line 150, sass/style.scss */
+.nav_wrap nav ul li.faq a:before {
+  content: "\f0e5";
+}
+/* line 151, sass/style.scss */
+.nav_wrap nav ul li.technic a:before {
+  content: "\f0ad";
+}
 
-  /* line 385, sass/style.scss */
+/* line 157, sass/style.scss */
+.img_main p {
+  padding: 0px 0 5px 1em;
+  font-size: 24px;
+  line-height: 1.0;
+}
+@media (max-width: 767px) {
+  /* line 157, sass/style.scss */
   .img_main p {
     font-size: 14px;
   }
-  /* line 388, sass/style.scss */
+}
+/* line 165, sass/style.scss */
+.img_main .p_first {
+  margin-top: 60px;
+}
+@media (max-width: 767px) {
+  /* line 165, sass/style.scss */
   .img_main .p_first {
     margin-top: 1em;
   }
+}
 
-  /* line 394, sass/style.scss */
+/* line 172, sass/style.scss */
+.breadcrumb {
+  background-color: #fff;
+}
+
+/* line 179, sass/style.scss */
+.main {
+  margin-bottom: 2em;
+}
+/* line 181, sass/style.scss */
+.main h3 {
+  margin-top: 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #fdde6e;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+/* line 187, sass/style.scss */
+.main h3 i {
+  padding-right: 0.3em;
+  font-size: 1.3em;
+}
+/* line 192, sass/style.scss */
+.main .btn {
+  margin-top: 1em;
+}
+/* line 196, sass/style.scss */
+.main section ul {
+  padding-left: 1em;
+}
+/* line 198, sass/style.scss */
+.main section ul li {
+  padding: 5px 0;
+  list-style: none;
+  font-size: 16px;
+}
+/* line 202, sass/style.scss */
+.main section ul li i.fa {
+  padding-right: 0.4em;
+  font-size: 30px;
+  color: #fdde6e;
+  vertical-align: bottom;
+}
+/* line 211, sass/style.scss */
+.main section .thumbnail img {
+  margin-top: 4px;
+}
+/* line 215, sass/style.scss */
+.main section .img-box {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  /* line 215, sass/style.scss */
   .main section .img-box {
     margin-bottom: 1em;
   }
-  /* line 397, sass/style.scss */
+}
+/* line 220, sass/style.scss */
+.main section .img-box img {
+  margin-top: 4px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  /* line 228, sass/style.scss */
   .main section .mobile-box {
     margin: 4px;
     margin-bottom: 20px;
@@ -453,8 +277,14 @@ footer small {
     border: 1px solid #ddd;
     border-radius: 4px;
   }
+}
+/* line 238, sass/style.scss */
+.main section .row {
+  margin-bottom: 40px;
+}
 
-  /* line 413, sass/style.scss */
+@media (max-width: 767px) {
+  /* line 249, sass/style.scss */
   .info .main ul,
   .plan .main ul,
   .mobile .main ul,
@@ -463,13 +293,189 @@ footer small {
   .technic .main ul {
     padding-left: 1em;
   }
-  /* line 415, sass/style.scss */
+}
+/* line 253, sass/style.scss */
+.info .main ul li,
+.plan .main ul li,
+.mobile .main ul li,
+.guide .main ul li,
+.faq .main ul li,
+.technic .main ul li {
+  margin-bottom: 12px;
+  list-style: none;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  /* line 253, sass/style.scss */
   .info .main ul li,
   .plan .main ul li,
   .mobile .main ul li,
   .guide .main ul li,
   .faq .main ul li,
   .technic .main ul li {
-    font-size: 14px;
+    padding-left: 14px;
   }
 }
+/* line 260, sass/style.scss */
+.info .main ul li:before,
+.plan .main ul li:before,
+.mobile .main ul li:before,
+.guide .main ul li:before,
+.faq .main ul li:before,
+.technic .main ul li:before {
+  font-size: 1.2em;
+  content: "\f0f6";
+  color: #635ab0;
+}
+
+/*
+ * short codeの出力成形用
+ */
+/* line 275, sass/style.scss */
+.mvno_info dl dt, .mvno_info dl dd {
+  float: left;
+  line-height: 1.8;
+}
+/* line 279, sass/style.scss */
+.mvno_info dl dt {
+  width: 30%;
+  clear: both;
+}
+/* line 283, sass/style.scss */
+.mvno_info dl dd {
+  width: 70%;
+}
+/* line 289, sass/style.scss */
+.mvno_info table tr th, .mvno_info table tr td {
+  padding: 5px;
+  text-align: center;
+}
+/* line 293, sass/style.scss */
+.mvno_info table tr .tbl_group {
+  background-color: #eee;
+  text-align: left;
+  padding-left: 5em;
+}
+
+/* line 301, sass/style.scss */
+aside {
+  margin-bottom: 2em;
+}
+/* line 303, sass/style.scss */
+aside h3 {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #eee;
+}
+/* line 309, sass/style.scss */
+aside ul {
+  padding-left: 1em;
+}
+/* line 311, sass/style.scss */
+aside ul li {
+  list-style: none;
+}
+/* line 313, sass/style.scss */
+aside ul li a {
+  font-size: 1.1em;
+  line-height: 2.0;
+}
+/* line 316, sass/style.scss */
+aside ul li a .fa-trophy {
+  color: #fdde6e;
+}
+/* line 317, sass/style.scss */
+aside ul li a .fa-circle-o {
+  color: #fff;
+}
+
+/* line 322, sass/style.scss */
+footer {
+  padding: 1em 0;
+  background-color: #eee;
+}
+/* line 325, sass/style.scss */
+footer ul {
+  clear: both;
+  margin: 16px 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 330, sass/style.scss */
+footer ul li {
+  display: inline-block;
+  padding-top: 10px;
+  list-style: none;
+}
+/* line 334, sass/style.scss */
+footer ul li a {
+  margin: 5px 30px;
+  font-size: 14px;
+  color: #333;
+}
+/* line 338, sass/style.scss */
+footer ul li a:hover {
+  text-decoration: none;
+  color: #777;
+  border-bottom: 1px solid #777;
+}
+/* line 346, sass/style.scss */
+footer small {
+  display: block;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  text-align: center;
+  color: #999;
+}
+
+/*
+ * about page
+ */
+/* line 358, sass/style.scss */
+.about dl {
+  overflow: hidden;
+}
+/* line 360, sass/style.scss */
+.about dl dt, .about dl dd {
+  float: left;
+  margin-bottom: 1em;
+  line-height: 1.8;
+}
+/* line 365, sass/style.scss */
+.about dl dt {
+  clear: both;
+  width: 20%;
+  padding-left: 1%;
+}
+/* line 370, sass/style.scss */
+.about dl dd {
+  width: 75%;
+  padding-left: 4%;
+}
+
+/*
+ * faq page
+ */
+/* line 381, sass/style.scss */
+.faq dl dt {
+  padding-left: 1em;
+}
+/* line 383, sass/style.scss */
+.faq dl dt:before {
+  content: "\f059";
+  color: #8982CC;
+}
+/* line 389, sass/style.scss */
+.faq dl dd {
+  margin-bottom: 2em;
+  padding-left: 1em;
+  line-height: 1.8;
+}
+/* line 393, sass/style.scss */
+.faq dl dd:before {
+  content: "\f118";
+  color: #fd6e70;
+}
+
+/* desktop first at modified only mobile because of using bootstrap */

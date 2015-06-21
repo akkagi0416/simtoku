@@ -50,7 +50,7 @@ h2{
     }
 }
 p{
-    line-height: 2.0;
+    line-height: 1.8;
     font-size: 16px;
 }
 a{
@@ -63,7 +63,8 @@ header{
     overflow: hidden;
     .logo{
         margin-top: 20px;
-        padding-left: 0;
+        margin-bottom: 10px;
+        padding: 0;
         line-height: 1.1;
         font-size: 24px;
         font-weight: bold;
@@ -102,8 +103,10 @@ header{
                 &.info      a:before{ content: "\f044"; }   // pencil-square-o
                 &.plan      a:before{ content: "\f115"; }   // folder-open-o
                 &.mobile    a:before{ content: "\f10b"; }   // mobile
-                &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
+                // &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
+                &.guide     a:before{ content: "\f15d"; }   // sort-alpha-asc
                 &.faq       a:before{ content: "\f0e5"; }   // comment-o
+                &.technic   a:before{ content: "\f0ad"; }   // wrench
             }
         }
     }
@@ -183,17 +186,18 @@ header{
 .plan .main,
 .mobile .main,
 .guide .main,
-.faq .main{
+.faq .main,
+.technic .main{
     ul{
         li{
-            margin-bottom: 1em;
+            margin-bottom: 12px;
             list-style: none;
             font-size: 16px;
             &:before{
                 padding-right: 0.5em;
                 font-family: FontAwesome;
                 font-weight: normal;
-                font-size: 1.3em;
+                font-size: 1.2em;
                 // content: "\f15c";   // file-text
                 content: "\f0f6";   // file-text-o
                 color: $color_blue;
@@ -294,7 +298,7 @@ footer{
         dt,dd{
             float: left;
             margin-bottom: 1em;
-            line-height: 1.7;
+            line-height: 1.8;
         }
         dt{
             clear: both;
@@ -404,7 +408,8 @@ footer{
     .plan .main,
     .mobile .main,
     .guide .main,
-    .faq .main{
+    .faq .main,
+    .technic .main{
         ul{
             padding-left: 1em;
             li{

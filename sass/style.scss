@@ -79,25 +79,42 @@ a>img:hover{
     opacity: 0.8;
 }
 header{
-    overflow: hidden;
-    @include col-sm{
+    // overflow: hidden;
+    .container{
         position: relative;
-        button{
+        form{
             position: absolute;
-            top: 4px;
+            top: 1em;
             right: 1em;
-            padding: 4px;
-            font-size: 10px;
-            border-radius: 4px; 
-            border: 1px solid #ccc;
-            background-color: #fff;
-            color: #666;
-            i.fa-bars{
-                display: block;
-                font-size: 20px;
+            input[type="text"]{
+                width: 15em;
             }
-            &:hover{
-                background-color: #eee;
+        }
+    }
+    @include col-sm{
+        .container{
+            margin-bottom: 4px;
+            form{
+                position: static;
+            }
+            search,
+            button{
+                position: absolute;
+                top: 4px;
+                right: 1em;
+                padding: 4px;
+                font-size: 10px;
+                border-radius: 4px; 
+                border: 1px solid #ccc;
+                background-color: #fff;
+                color: #666;
+                i.fa-bars{
+                    display: block;
+                    font-size: 20px;
+                }
+                &:hover{
+                    background-color: #eee;
+                }
             }
         }
     }
@@ -147,6 +164,7 @@ header{
                 &.mobile    a:before{ content: "\f10b"; }   // mobile
                 // &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
                 &.guide     a:before{ content: "\f15d"; }   // sort-alpha-asc
+                &.news      a:before{ content: "\f0f6"; }   // file-text-o
                 &.faq       a:before{ content: "\f0e5"; }   // comment-o
                 &.technic   a:before{ content: "\f0ad"; }   // wrench
             }
@@ -182,7 +200,8 @@ header{
         margin-top: 0;
         padding-bottom: 4px;
         border-bottom: 2px solid $color_main;
-        font-size: 1.1em;
+        // font-size: 1.1em;
+        font-size: 16px;
         font-weight: bold;
         i{
             padding-right: 0.3em;
@@ -261,7 +280,8 @@ header{
                 @extend %fontawesome;
                 font-size: 1.2em;
                 // content: "\f15c";   // file-text
-                content: "\f0f6";   // file-text-o
+                // content: "\f0f6";   // file-text-o
+                content: "\f0c6";   // paperclip
                 color: $color_blue;
             }
         }

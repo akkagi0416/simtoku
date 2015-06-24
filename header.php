@@ -26,15 +26,13 @@
 <?php
     endif;
 ?>
-<!--
-                <p class="search"><i class="fa fa-search"></i></p>
                 <form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
                     <input type="text" value name="s" placeholder="検索...">
                     <input type="submit" value="検索">
                 </form>
--->
-            </div>
-            <button type="button" id="button" class="visible-xs"><i class="fa fa-bars"></i>メニュー</button>
+                <button type="button" id="search" class="visible-xs"><i class="fa fa-search"></i>検索</button>
+                <button type="button" id="button" class="visible-xs"><i class="fa fa-bars"></i>メニュー</button>
+            </div><!-- //.container -->
         </header>
         <div class="nav_wrap">
             <div class="container">

@@ -8,6 +8,9 @@
             <li><a href="#"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 楽天モバイル</a></li>
             <li><a href="#"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 b-mobile</a></li>
         </ul>
+        <p>
+            <a href="http://h.accesstrade.net/sp/cc?rk=0100htrs00dtg9" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100htrs00dtg9" alt="" border="0" class="img-responsive" style="margin: 0 auto;"></a>
+        </p>
         <h3>格安SIMニュース</h3>
         <ul>
             <li>news 1</li>

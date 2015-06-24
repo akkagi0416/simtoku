@@ -13,7 +13,7 @@
 <?php
             if( has_post_thumbnail() ) :
 ?>
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array( 200, 150 ) ); ?></a>
+<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array( 200, 150 ), array( 'class' => 'img-responsive' ) ); ?></a>
 <?php
             else :
 ?>
@@ -32,6 +32,37 @@
 <?php
         endwhile;
     endif;
+?>
+<?php
+    global $wp_query;
+
+    $big = 999999999; // need an unlikely integer
+
+    $page_format = paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages,
+        'prev_next' => true,
+        'prev_text' => __('&laquo;'),
+        'next_text' => __('&raquo;'),
+        'type' => 'array',
+    ) );
+    // make bootstrap pagination format
+    if( is_array( $page_format ) ){
+        $paged = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
+        echo '<div><ul class="pagination">';
+        foreach( $page_format as $page ){
+            $str = str_replace( 'current', 'active', $page );
+            if( strstr( $page, 'current' ) ){
+                echo "<li class='active'>$page</li>";
+            }else{
+                echo "<li>$page</li>";
+            }
+        }
+        echo '</ul></div>';
+    }
+    wp_reset_query();
 ?>
             </section>
         </div><!-- //.main -->

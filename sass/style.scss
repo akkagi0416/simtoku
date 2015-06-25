@@ -21,6 +21,7 @@ $color_main : #fdde6e;
 $color_blue : #635ab0;  // blue
 $color_blue_light : #8982CC;    // blue light for dark icon
 $color_red  : #fd6e70;  // red
+$font_size : 15px;
 
 %fontawesome{
     padding-right: 0.4em;
@@ -66,7 +67,8 @@ h2{
 }
 p{
     line-height: 1.8;
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: $font_size;
     @include col-sm{
         line-height: 1.6;
         font-size: 14px;
@@ -198,6 +200,7 @@ header{
     margin-bottom: 2em;
     h3{
         margin-top: 0;
+        margin-bottom: 1em;
         padding-bottom: 4px;
         border-bottom: 2px solid $color_main;
         // font-size: 1.1em;
@@ -217,7 +220,8 @@ header{
             li{
                 padding: 5px 0;
                 list-style: none;
-                font-size: 16px;
+                // font-size: 16px;
+                font-size: $font_size;
                 i.fa{
                     padding-right: 0.4em;
                     font-size: 30px;
@@ -272,7 +276,8 @@ header{
         li{
             margin-bottom: 12px;
             list-style: none;
-            font-size: 16px;
+            // font-size: 16px;
+            font-size: $font_size;
             @include col-sm{
                 padding-left: 14px;
             }
@@ -353,7 +358,8 @@ footer{
             list-style: none;
             a{
                 margin: 5px 30px;
-                font-size: 14px;
+                // font-size: 14px;
+                font-size: $font_size;
                 color: #333;
                 &:hover{
                     text-decoration: none;

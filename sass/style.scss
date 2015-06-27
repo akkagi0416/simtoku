@@ -343,6 +343,26 @@ aside{
             }
         }
     }
+    .side_news {
+        li{
+            overflow: hidden;
+            margin-bottom: 1em;
+            .news_img{
+                float: left;
+                width: 25%;
+            }
+            .news_content{
+                float: left;
+                width: 70%;
+                padding-left: 5%;
+                h4{
+                    margin: 0 0;
+                    font-size: $font_size;
+                }
+            }
+        }
+    }
+    
 }
 footer{
     padding: 1em 0;

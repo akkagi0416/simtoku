@@ -30,26 +30,24 @@
         while( $my_query->have_posts() ) :$my_query->the_post();
 ?>
                 <li>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <a href="<?php the_permalink(); ?>">
+                    <div class="news_img">
+                        <a href="<?php the_permalink(); ?>">
 <?php
-    if( has_post_thumbnail() ) :
+if( has_post_thumbnail() ) :
 ?>
-                                <?php the_post_thumbnail( array( 200, 150 ), array( 'class' => 'img-responsive' ) ); ?>
+                            <?php the_post_thumbnail( array( 200, 150 ), array( 'class' => 'img-responsive' ) ); ?>
 <?php
-    else :
+else :
 ?>
-                                <img src="http://lorempixel.com/200/150/city" alt="<?php the_title(); ?>" class="img-responsive">
+                            <img src="http://lorempixel.com/200/150/city" alt="<?php the_title(); ?>" class="img-responsive">
 <?php
-    endif;
+endif;
 ?>
-                            </a>
-                        </div>
-                        <div class="col-sm-8">
-                            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                            <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y-m-d' ); ?></time>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="news_content">
+                        <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                        <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y-m-d' ); ?></time>
                     </div>
                 </li>
 <?php

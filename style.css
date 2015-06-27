@@ -411,38 +411,59 @@ aside ul li a .fa-trophy {
 aside ul li a .fa-circle-o {
   color: #fff;
 }
-
 /* line 347, sass/style.scss */
+aside .side_news li {
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+/* line 350, sass/style.scss */
+aside .side_news li .news_img {
+  float: left;
+  width: 25%;
+}
+/* line 354, sass/style.scss */
+aside .side_news li .news_content {
+  float: left;
+  width: 70%;
+  padding-left: 5%;
+}
+/* line 358, sass/style.scss */
+aside .side_news li .news_content h4 {
+  margin: 0 0;
+  font-size: 15px;
+}
+
+/* line 367, sass/style.scss */
 footer {
   padding: 1em 0;
   background-color: #eee;
 }
-/* line 350, sass/style.scss */
+/* line 370, sass/style.scss */
 footer ul {
   clear: both;
   margin: 16px 0;
   padding: 0;
   text-align: center;
 }
-/* line 355, sass/style.scss */
+/* line 375, sass/style.scss */
 footer ul li {
   display: inline-block;
   padding-top: 10px;
   list-style: none;
 }
-/* line 359, sass/style.scss */
+/* line 379, sass/style.scss */
 footer ul li a {
   margin: 5px 30px;
   font-size: 15px;
   color: #333;
 }
-/* line 364, sass/style.scss */
+/* line 384, sass/style.scss */
 footer ul li a:hover {
   text-decoration: none;
   color: #777;
   border-bottom: 1px solid #777;
 }
-/* line 372, sass/style.scss */
+/* line 392, sass/style.scss */
 footer small {
   display: block;
   margin-bottom: 30px;
@@ -454,23 +475,23 @@ footer small {
 /*
  * about page
  */
-/* line 384, sass/style.scss */
+/* line 404, sass/style.scss */
 .about dl {
   overflow: hidden;
 }
-/* line 386, sass/style.scss */
+/* line 406, sass/style.scss */
 .about dl dt, .about dl dd {
   float: left;
   margin-bottom: 1em;
   line-height: 1.8;
 }
-/* line 391, sass/style.scss */
+/* line 411, sass/style.scss */
 .about dl dt {
   clear: both;
   width: 20%;
   padding-left: 1%;
 }
-/* line 396, sass/style.scss */
+/* line 416, sass/style.scss */
 .about dl dd {
   width: 75%;
   padding-left: 4%;
@@ -479,22 +500,22 @@ footer small {
 /*
  * faq page
  */
-/* line 407, sass/style.scss */
+/* line 427, sass/style.scss */
 .faq dl dt {
   padding-left: 1em;
 }
-/* line 409, sass/style.scss */
+/* line 429, sass/style.scss */
 .faq dl dt:before {
   content: "\f059";
   color: #8982CC;
 }
-/* line 415, sass/style.scss */
+/* line 435, sass/style.scss */
 .faq dl dd {
   margin-bottom: 2em;
   padding-left: 1em;
   line-height: 1.8;
 }
-/* line 419, sass/style.scss */
+/* line 439, sass/style.scss */
 .faq dl dd:before {
   content: "\f118";
   color: #fd6e70;

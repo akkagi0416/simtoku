@@ -31,20 +31,46 @@
             'order' => 'ASC',
         );
         $posts = get_posts( $args );
-    // var_dump( $posts );
+
+        $custum_field = 'index_group';
+        $index_list = array(
+            'info' => array(
+                '目次',
+            ),
+            'plan' => array(
+                'おすすめプラン',
+                '格安SIMのプラン選びABC',
+                'MVNO紹介',
+            ),
+            'mobile' => array(
+            ),
+            'guide' => array(
+                '格安SIMを使いはじめるまでの流れ',
+            ),
+        );
+        // title, url, custum_field値を取得して配列にリストアップ
+        $title_lists = array();
         foreach( $posts as $p ){
-            echo '<h2>' . $p->post_title . '</h2>';
+            $title              = $p->post_title;
+            $url                = get_permalink( $p->ID );
+            $index_group_number = get_post_meta( $p->ID, $custum_field, true );
+            if( $index_group_number == '' ){ $index_group_number = '0'; }  // custum_field記入忘れ対応
+            array_push( $title_lists, array( $title, $url, $index_group_number ) );
+        }
+        // custum_field値ごとに該当のタイトルを出力
+        $this_page = $index_list[ $post->post_name ];
+        for( $i = 0; $i < count( $this_page ); $i++ ){
+            echo '<h2>' . $this_page[ $i ] . '</h2>';
             echo '<ul>';
-            $args = array(
-                'title_li' => '',
-                'child_of' => $p->ID,
-                'sort_column' => 'menu_order',
-                'sort_order'  => 'asc',
-                'depth' => 1,
-            );
-            wp_list_pages( $args );
+            foreach( $title_lists as $title ){
+                if( $title[2] == $i ){
+                    echo '<li><a href="' . $title[1] . '">' . $title[0] . '</a></li>';
+                }
+            }
             echo '</ul>';
         }
+// var_dump( $title_lists );
+// var_dump( $posts );
         wp_reset_postdata();
     }
 ?>

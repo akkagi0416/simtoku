@@ -5,6 +5,7 @@
 ?>
         <ul>
             <li><a href="<?php bloginfo( 'url' ); ?>/about/">サイト情報</a></li>
+            <li><a href="<?php bloginfo( 'url' ); ?>/category/blog/">管理人ひとり言</a></li>
             <li><a href="<?php bloginfo( 'url' ); ?>/about/#contact">お問い合わせ</a></li>
         </ul>
         <small>Copyright &copy; 2015 <?php bloginfo( 'name' ); ?> All Rights Reserved.</small>

@@ -24,6 +24,7 @@
         // not 親
     }else{
         // 親
+        // タイトル一覧を自動表示
         $args = array(
             'post_parent' => $post->ID,
             'post_type' => 'page',

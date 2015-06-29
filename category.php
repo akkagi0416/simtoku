@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-8 main">
             <section>
-            <h1><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></h1>
+            <h1 class="category_h1"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></h1>
 <?php
     if( have_posts() ) :
         while( have_posts() ) : the_post()

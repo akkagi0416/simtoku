@@ -22,7 +22,7 @@
 <?php
     else :
 ?>
-                <p class="logo"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></p>
+                <h2 class="logo"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h2>
 <?php
     endif;
 ?>

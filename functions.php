@@ -11,3 +11,5 @@ register_sidebar( array(
 ) );
 
 add_theme_support( 'post-thumbnails' );
+
+// remove_filter( 'the_excerpt', 'wpautop' );  // 前後<p>タグを防止

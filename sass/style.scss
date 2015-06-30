@@ -201,9 +201,11 @@ header{
 }
 .main{
     margin-bottom: 2em;
-    h1 + time{
+    time{
         display: block;
         margin-bottom: 1em;
+    }
+    h1 + time{
         text-align: right;
     }
     h3{
@@ -218,6 +220,9 @@ header{
             padding-right: 0.3em;
             font-size: 1.3em;
         }
+    }
+    p{
+        margin-bottom: 2em;
     }
     .btn{
         margin-top: 1em;
@@ -299,6 +304,7 @@ header{
             &:before{
                 @extend %fontawesome;
                 font-size: 1.2em;
+                padding-right: 0.6em;
                 // content: "\f15c";   // file-text
                 // content: "\f0f6";   // file-text-o
                 content: "\f0c6";   // paperclip
@@ -372,7 +378,10 @@ aside{
                 padding-left: 5%;
                 h4{
                     margin: 0 0;
-                    font-size: $font_size;
+                    a{
+                        line-height: 1.4;
+                        font-size: $font_size;
+                    }
                 }
             }
         }

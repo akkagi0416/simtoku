@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
         <?php wp_head(); ?>
     </head>
-    <body class="<?php echo $post->post_name; ?>">
+    <body class="<?php $cat = get_the_category(); echo $cat[0]->category_nicename; ?>">
         <header>
             <div class="container">
 <?php
@@ -73,7 +73,7 @@
                         <!-- <p>おおロミオどうしてあなたはロミオなの</p> -->
                     </div>
                     <div class="col-sm-8">
-                        <img src="<?php bloginfo( 'template_url' ); ?>/img/main_3.png" alt="" class="img-responsive">
+                        <img src="<?php bloginfo( 'template_url' ); ?>/img/main.png" alt="" class="img-responsive">
                     </div>
                 </div>
             </div>

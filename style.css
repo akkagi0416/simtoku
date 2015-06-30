@@ -239,12 +239,15 @@ header .logo:before {
   margin-bottom: 2em;
 }
 /* line 204, sass/style.scss */
-.main h1 + time {
+.main time {
   display: block;
   margin-bottom: 1em;
+}
+/* line 208, sass/style.scss */
+.main h1 + time {
   text-align: right;
 }
-/* line 209, sass/style.scss */
+/* line 211, sass/style.scss */
 .main h3 {
   margin-top: 0;
   margin-bottom: 1em;
@@ -253,54 +256,58 @@ header .logo:before {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 217, sass/style.scss */
+/* line 219, sass/style.scss */
 .main h3 i {
   padding-right: 0.3em;
   font-size: 1.3em;
 }
-/* line 222, sass/style.scss */
+/* line 224, sass/style.scss */
+.main p {
+  margin-bottom: 2em;
+}
+/* line 227, sass/style.scss */
 .main .btn {
   margin-top: 1em;
 }
-/* line 226, sass/style.scss */
+/* line 231, sass/style.scss */
 .main section ul {
   padding-left: 1em;
 }
-/* line 228, sass/style.scss */
+/* line 233, sass/style.scss */
 .main section ul li {
   padding: 5px 0;
   list-style: none;
   font-size: 15px;
 }
-/* line 233, sass/style.scss */
+/* line 238, sass/style.scss */
 .main section ul li i.fa {
   padding-right: 0.4em;
   font-size: 30px;
   color: #fdde6e;
   vertical-align: bottom;
 }
-/* line 242, sass/style.scss */
+/* line 247, sass/style.scss */
 .main section .thumbnail img {
   margin-top: 4px;
 }
-/* line 246, sass/style.scss */
+/* line 251, sass/style.scss */
 .main section .img-box {
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
-  /* line 246, sass/style.scss */
+  /* line 251, sass/style.scss */
   .main section .img-box {
     margin-bottom: 1em;
   }
 }
-/* line 251, sass/style.scss */
+/* line 256, sass/style.scss */
 .main section .img-box img {
   margin-top: 4px;
   margin-right: auto;
   margin-left: auto;
 }
 @media (max-width: 767px) {
-  /* line 259, sass/style.scss */
+  /* line 264, sass/style.scss */
   .main section .mobile-box {
     margin: 4px;
     margin-bottom: 20px;
@@ -310,12 +317,12 @@ header .logo:before {
     border-radius: 4px;
   }
 }
-/* line 269, sass/style.scss */
+/* line 274, sass/style.scss */
 .main section .row {
   margin-bottom: 40px;
 }
 
-/* line 274, sass/style.scss */
+/* line 279, sass/style.scss */
 .category_h1 {
   border: none;
 }
@@ -324,7 +331,7 @@ header .logo:before {
  * 固定ページのみ
  */
 @media (max-width: 767px) {
-  /* line 287, sass/style.scss */
+  /* line 292, sass/style.scss */
   .info .main ul,
   .plan .main ul,
   .mobile .main ul,
@@ -334,7 +341,7 @@ header .logo:before {
     padding-left: 1em;
   }
 }
-/* line 291, sass/style.scss */
+/* line 296, sass/style.scss */
 .info .main ul li,
 .plan .main ul li,
 .mobile .main ul li,
@@ -346,7 +353,7 @@ header .logo:before {
   font-size: 15px;
 }
 @media (max-width: 767px) {
-  /* line 291, sass/style.scss */
+  /* line 296, sass/style.scss */
   .info .main ul li,
   .plan .main ul li,
   .mobile .main ul li,
@@ -356,7 +363,7 @@ header .logo:before {
     padding-left: 14px;
   }
 }
-/* line 299, sass/style.scss */
+/* line 304, sass/style.scss */
 .info .main ul li:before,
 .plan .main ul li:before,
 .mobile .main ul li:before,
@@ -364,6 +371,7 @@ header .logo:before {
 .faq .main ul li:before,
 .technic .main ul li:before {
   font-size: 1.2em;
+  padding-right: 0.6em;
   content: "\f0c6";
   color: #635ab0;
 }
@@ -371,117 +379,121 @@ header .logo:before {
 /*
  * short codeの出力成形用
  */
-/* line 315, sass/style.scss */
+/* line 321, sass/style.scss */
 .mvno_info dl dt, .mvno_info dl dd {
   float: left;
   line-height: 1.8;
 }
-/* line 319, sass/style.scss */
+/* line 325, sass/style.scss */
 .mvno_info dl dt {
   width: 30%;
   clear: both;
 }
-/* line 323, sass/style.scss */
+/* line 329, sass/style.scss */
 .mvno_info dl dd {
   width: 70%;
 }
-/* line 329, sass/style.scss */
+/* line 335, sass/style.scss */
 .mvno_info table tr th, .mvno_info table tr td {
   padding: 5px;
   text-align: center;
 }
-/* line 333, sass/style.scss */
+/* line 339, sass/style.scss */
 .mvno_info table tr .tbl_group {
   background-color: #eee;
   text-align: left;
   padding-left: 5em;
 }
 
-/* line 341, sass/style.scss */
+/* line 347, sass/style.scss */
 aside {
   margin-bottom: 2em;
 }
-/* line 343, sass/style.scss */
+/* line 349, sass/style.scss */
 aside h3 {
   padding: 12px;
   font-weight: bold;
   font-size: 16px;
   background-color: #eee;
 }
-/* line 349, sass/style.scss */
+/* line 355, sass/style.scss */
 aside ul {
   padding-left: 1em;
 }
-/* line 351, sass/style.scss */
+/* line 357, sass/style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 353, sass/style.scss */
+/* line 359, sass/style.scss */
 aside ul li a {
   font-size: 1.1em;
   line-height: 2.0;
 }
-/* line 356, sass/style.scss */
+/* line 362, sass/style.scss */
 aside ul li a .fa-trophy {
   color: #fdde6e;
 }
-/* line 357, sass/style.scss */
+/* line 363, sass/style.scss */
 aside ul li a .fa-circle-o {
   color: #fff;
 }
-/* line 362, sass/style.scss */
+/* line 368, sass/style.scss */
 aside .side_news li {
   overflow: hidden;
   margin-bottom: 1em;
 }
-/* line 365, sass/style.scss */
+/* line 371, sass/style.scss */
 aside .side_news li .news_img {
   float: left;
   width: 25%;
 }
-/* line 369, sass/style.scss */
+/* line 375, sass/style.scss */
 aside .side_news li .news_content {
   float: left;
   width: 70%;
   padding-left: 5%;
 }
-/* line 373, sass/style.scss */
+/* line 379, sass/style.scss */
 aside .side_news li .news_content h4 {
   margin: 0 0;
+}
+/* line 381, sass/style.scss */
+aside .side_news li .news_content h4 a {
+  line-height: 1.4;
   font-size: 15px;
 }
 
-/* line 382, sass/style.scss */
+/* line 391, sass/style.scss */
 footer {
   padding: 1em 0;
   background-color: #eee;
 }
-/* line 385, sass/style.scss */
+/* line 394, sass/style.scss */
 footer ul {
   clear: both;
   margin: 16px 0;
   padding: 0;
   text-align: center;
 }
-/* line 390, sass/style.scss */
+/* line 399, sass/style.scss */
 footer ul li {
   display: inline-block;
   padding-top: 10px;
   list-style: none;
 }
-/* line 394, sass/style.scss */
+/* line 403, sass/style.scss */
 footer ul li a {
   margin: 5px 30px;
   font-size: 15px;
   color: #333;
 }
-/* line 399, sass/style.scss */
+/* line 408, sass/style.scss */
 footer ul li a:hover {
   text-decoration: none;
   color: #777;
   border-bottom: 1px solid #777;
 }
-/* line 407, sass/style.scss */
+/* line 416, sass/style.scss */
 footer small {
   display: block;
   margin-bottom: 30px;
@@ -493,23 +505,23 @@ footer small {
 /*
  * about page
  */
-/* line 419, sass/style.scss */
+/* line 428, sass/style.scss */
 .about dl {
   overflow: hidden;
 }
-/* line 421, sass/style.scss */
+/* line 430, sass/style.scss */
 .about dl dt, .about dl dd {
   float: left;
   margin-bottom: 1em;
   line-height: 1.8;
 }
-/* line 426, sass/style.scss */
+/* line 435, sass/style.scss */
 .about dl dt {
   clear: both;
   width: 20%;
   padding-left: 1%;
 }
-/* line 431, sass/style.scss */
+/* line 440, sass/style.scss */
 .about dl dd {
   width: 75%;
   padding-left: 4%;
@@ -518,22 +530,22 @@ footer small {
 /*
  * faq page
  */
-/* line 442, sass/style.scss */
+/* line 451, sass/style.scss */
 .faq dl dt {
   padding-left: 1em;
 }
-/* line 444, sass/style.scss */
+/* line 453, sass/style.scss */
 .faq dl dt:before {
   content: "\f059";
   color: #8982CC;
 }
-/* line 450, sass/style.scss */
+/* line 459, sass/style.scss */
 .faq dl dd {
   margin-bottom: 2em;
   padding-left: 1em;
   line-height: 1.8;
 }
-/* line 454, sass/style.scss */
+/* line 463, sass/style.scss */
 .faq dl dd:before {
   content: "\f118";
   color: #fd6e70;

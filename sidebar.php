@@ -3,10 +3,10 @@
         <div class="side_ranking">
             <h3>格安SIM 格安ランキング</h3>
             <ul>
-                <li><a href="#"><i class="fa fa-trophy fa-fw fa-2x"></i> 1位 660円 DMM mobile</a></li>
+                <li><a href="http://h.accesstrade.net/sp/cc?rk=0100hsya00ekjc" rel="nofollow" target="_blank"><i class="fa fa-trophy fa-fw fa-2x"></i> 1位 660円 DMM mobile</a></li>
+                <li><a href="http://h.accesstrade.net/sp/cc?rk=0100h04l00ekjc" rel="nofollow" target="_blank"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 OCN モバイル ONE</a></li>
                 <li><a href="#"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 IIJmio</a></li>
                 <li><a href="#"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 BIGLOBE LTE・3G</a></li>
-                <li><a href="#"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 楽天モバイル</a></li>
                 <li><a href="#"><i class="fa fa-circle-o fa-fw fa-2x"></i> 2位 900円 b-mobile</a></li>
             </ul>
             <p>

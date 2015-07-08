@@ -12,7 +12,20 @@
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
         <?php wp_head(); ?>
     </head>
-    <body class="<?php $cat = get_the_category(); echo $cat[0]->category_nicename; ?>">
+<?php
+    $body_class = '';
+    if( is_page() ){
+        $page = get_page( get_the_ID() );
+        $body_class = $page->post_name;
+    } elseif( is_category ){ 
+        $cat = get_the_category();
+        $body_class = $cat[0]->category_nicename;
+    }
+    if( is_single() ){
+        $body_class .= ' single';
+    }
+?>
+    <body class="<?php echo $body_class; ?>">
         <header>
             <div class="container">
 <?php

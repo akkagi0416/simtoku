@@ -25,7 +25,7 @@
                     <div class="col-sm-8">
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <time datetime="<?php the_time( 'Y-m-d' ); ?>">投稿日 : <?php the_time( 'Y-m-d' ); ?></time>
-                        <p><?php echo mb_substr( get_the_excerpt(), 0, 60 ); ?></p>
+                        <p><?php echo mb_substr( get_the_excerpt(), 0, 70 ); ?></p>
                         <a href="<?php the_permalink(); ?>" class="btn btn-primary pull-right">続きを読む <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>

@@ -18,8 +18,10 @@
 // $color_main : #fed232;
 $color_main : #fdde6e;
 // $color_blue : #6e75fd;  // blue
-$color_blue : #635ab0;  // blue
-$color_blue_light : #8982CC;    // blue light for dark icon
+// $color_blue : #635ab0;  // blue
+// $color_blue_light : #8982CC;    // blue light for dark icon
+$color_blue : #337ab7;  // blue
+$color_blue_light : #5c95c5;    // blue light for dark icon
 $color_red  : #fd6e70;  // red
 $font_size : 15px;
 
@@ -79,6 +81,9 @@ a{
 }
 a>img:hover{
     opacity: 0.8;
+}
+pre{
+    margin-bottom: 2em;
 }
 header{
     // overflow: hidden;
@@ -210,8 +215,8 @@ header{
     }
     h3{
         margin-top: 0;
-        margin-bottom: 1em;
-        padding-bottom: 4px;
+        margin-bottom: 1.5em;
+        padding-bottom: 6px;
         border-bottom: 2px solid $color_main;
         // font-size: 1.1em;
         font-size: 16px;
@@ -226,6 +231,13 @@ header{
     }
     .btn{
         margin-top: 1em;
+    }
+    ul, ol{
+        margin-bottom: 1.5em;
+        li{
+            line-height: 1.8;
+            font-size: $font_size;
+        }
     }
     section{
         ul{

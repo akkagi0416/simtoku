@@ -229,6 +229,10 @@ header{
     p{
         margin-bottom: 2em;
     }
+    p + ul,
+    p + ol{
+        margin-top: -1em;
+    }
     .btn{
         margin-top: 1em;
     }

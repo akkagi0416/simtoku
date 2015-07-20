@@ -13,6 +13,7 @@ class Mvno
     function __construct()
     {
         $dbname = 'sqlite:/var/www/sim/wp-content/themes/sim/data/mvno.db';
+        // $dbname = 'sqlite:' . __DIR__ . '../data/mvno.db';
 
         try{
             $this->db = new PDO( $dbname );

@@ -24,19 +24,25 @@ if File.exist?( db_fname )
 end
 $db = SQLite3::Database.new( db_fname )
 
-def create_table( tbname, row )
+def create_table( tbname, data_name, data_type )
     sql = "CREATE TABLE #{tbname}(%COLUMN%)"
     column = ''
-    length = row.length
-    row.each_with_index do |c, i|
-        column += "\n\t"
-        if c =~ /^(id$|id_)/
-            column += c + ' INTEGER,'
-            next
-        end
-        column += c + ' TEXT'
+    length = data_name.length
+#    row.each_with_index do |c, i|
+#        column += "\n\t"
+#        if c =~ /^(id$|id_)/
+#            column += c + ' INTEGER,'
+#            next
+#        end
+#        column += c + ' TEXT'
+#        if i != length - 1
+#            column += ','
+#        end
+#    end
+    data_name.each_with_index do |name, i|
+        column += "\n\t#{name} #{data_type[i]}"
         if i != length - 1
-            column += ','
+           column += ','
         end
     end
     sql = sql.sub(/%COLUMN%/, column)
@@ -63,11 +69,16 @@ end
 def csv2db(fname)
     open(fname, "r:Windows-31J:UTF-8") do |f|
         tbname = ""
+        data_name = ""
+        data_type = ""
         CSV.new(f).each_with_index do |row, i|
             if i == 0           # テーブル名だけ取得
                 tbname = row[0]
             elsif i == 1        # columnを取得
-                create_table( tbname, row )
+                data_name = row
+            elsif i == 2        # columnを取得
+                data_type = row
+                create_table( tbname, data_name, data_type )
             else                # 各行をdbへ記録
                 insert_into( tbname, row )
             end

@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-sm-4">
     <aside>
         <div class="side_ranking">
             <h3>格安SIM 格安ランキング</h3>
@@ -19,7 +19,7 @@
 <?php
     $args = array( 
         'category_name' => 'news',
-        'posts_per_page' => 5,
+        'posts_per_page' => 8,
     );
     $my_query = new WP_Query( $args );
 

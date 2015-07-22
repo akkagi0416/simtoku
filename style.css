@@ -256,7 +256,7 @@ header .logo:before {
 .main h3 {
   margin-top: 0;
   margin-bottom: 1.5em;
-  padding-bottom: 6px;
+  padding-bottom: 10px;
   border-bottom: 2px solid #fdde6e;
   font-size: 16px;
   font-weight: bold;
@@ -399,120 +399,149 @@ header .logo:before {
  * short codeの出力成形用
  */
 /* line 337, sass/style.scss */
-.mvno_info dl dt, .mvno_info dl dd {
+.mvno_s_info a img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 342, sass/style.scss */
+.mvno_s_info .mybtn {
+  text-align: center;
+}
+/* line 344, sass/style.scss */
+.mvno_s_info .mybtn a {
+  display: inline-block;
+  width: 40%;
+  margin: 0 0.5em;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* line 351, sass/style.scss */
+.mvno_s_info .mybtn a:first-of-type {
+  border: 1px solid #337ab7;
+  background-color: #337ab7;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  /* line 360, sass/style.scss */
+  .mvno_s_info .mybtn a {
+    display: block;
+    margin: 0.5em 1em;
+    width: initial;
+  }
+  /* line 365, sass/style.scss */
+  .mvno_s_info .mybtn img {
+    display: inherit;
+  }
+}
+/* line 371, sass/style.scss */
+.mvno_s_info dl dt, .mvno_s_info dl dd {
   float: left;
   line-height: 1.8;
 }
-/* line 341, sass/style.scss */
-.mvno_info dl dt {
+/* line 375, sass/style.scss */
+.mvno_s_info dl dt {
   width: 30%;
   clear: both;
 }
-/* line 345, sass/style.scss */
-.mvno_info dl dd {
+/* line 379, sass/style.scss */
+.mvno_s_info dl dd {
   width: 70%;
 }
-/* line 351, sass/style.scss */
-.mvno_info table tr th, .mvno_info table tr td {
-  padding: 5px;
+/* line 385, sass/style.scss */
+.mvno_s_info table tr th, .mvno_s_info table tr td {
   text-align: center;
 }
-/* line 355, sass/style.scss */
-.mvno_info table tr .tbl_group {
-  background-color: #eee;
-  text-align: left;
-  padding-left: 5em;
-}
 
-/* line 363, sass/style.scss */
+/* line 392, sass/style.scss */
 aside {
   margin-bottom: 2em;
 }
-/* line 365, sass/style.scss */
+/* line 394, sass/style.scss */
 aside h3 {
   padding: 12px;
   font-weight: bold;
   font-size: 16px;
   background-color: #eee;
 }
-/* line 371, sass/style.scss */
+/* line 400, sass/style.scss */
 aside ul {
   padding-left: 1em;
 }
-/* line 373, sass/style.scss */
+/* line 402, sass/style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 375, sass/style.scss */
+/* line 404, sass/style.scss */
 aside ul li a {
   font-size: 1.1em;
   line-height: 2.0;
 }
-/* line 378, sass/style.scss */
+/* line 407, sass/style.scss */
 aside ul li a .fa-trophy {
   color: #fdde6e;
 }
-/* line 379, sass/style.scss */
+/* line 408, sass/style.scss */
 aside ul li a .fa-circle-o {
   color: #fff;
 }
-/* line 384, sass/style.scss */
+/* line 413, sass/style.scss */
 aside .side_news li {
   overflow: hidden;
   margin-bottom: 1em;
 }
-/* line 387, sass/style.scss */
+/* line 416, sass/style.scss */
 aside .side_news li .news_img {
   float: left;
   width: 25%;
 }
-/* line 391, sass/style.scss */
+/* line 420, sass/style.scss */
 aside .side_news li .news_content {
   float: left;
   width: 70%;
   padding-left: 5%;
 }
-/* line 395, sass/style.scss */
+/* line 424, sass/style.scss */
 aside .side_news li .news_content h4 {
   margin: 0 0;
 }
-/* line 397, sass/style.scss */
+/* line 426, sass/style.scss */
 aside .side_news li .news_content h4 a {
   line-height: 1.4;
   font-size: 15px;
 }
 
-/* line 407, sass/style.scss */
+/* line 436, sass/style.scss */
 footer {
   padding: 1em 0;
   background-color: #eee;
 }
-/* line 410, sass/style.scss */
+/* line 439, sass/style.scss */
 footer ul {
   clear: both;
   margin: 16px 0;
   padding: 0;
   text-align: center;
 }
-/* line 415, sass/style.scss */
+/* line 444, sass/style.scss */
 footer ul li {
   display: inline-block;
   padding-top: 10px;
   list-style: none;
 }
-/* line 419, sass/style.scss */
+/* line 448, sass/style.scss */
 footer ul li a {
   margin: 5px 30px;
   font-size: 15px;
   color: #333;
 }
-/* line 424, sass/style.scss */
+/* line 453, sass/style.scss */
 footer ul li a:hover {
   text-decoration: none;
   color: #777;
   border-bottom: 1px solid #777;
 }
-/* line 432, sass/style.scss */
+/* line 461, sass/style.scss */
 footer small {
   display: block;
   margin-bottom: 30px;
@@ -524,23 +553,23 @@ footer small {
 /*
  * about page
  */
-/* line 444, sass/style.scss */
+/* line 473, sass/style.scss */
 .about dl {
   overflow: hidden;
 }
-/* line 446, sass/style.scss */
+/* line 475, sass/style.scss */
 .about dl dt, .about dl dd {
   float: left;
   margin-bottom: 1em;
   line-height: 1.8;
 }
-/* line 451, sass/style.scss */
+/* line 480, sass/style.scss */
 .about dl dt {
   clear: both;
   width: 20%;
   padding-left: 1%;
 }
-/* line 456, sass/style.scss */
+/* line 485, sass/style.scss */
 .about dl dd {
   width: 75%;
   padding-left: 4%;
@@ -549,22 +578,22 @@ footer small {
 /*
  * faq page
  */
-/* line 467, sass/style.scss */
+/* line 496, sass/style.scss */
 .faq dl dt {
   padding-left: 1em;
 }
-/* line 469, sass/style.scss */
+/* line 498, sass/style.scss */
 .faq dl dt:before {
   content: "\f059";
   color: #5c95c5;
 }
-/* line 475, sass/style.scss */
+/* line 504, sass/style.scss */
 .faq dl dd {
   margin-bottom: 2em;
   padding-left: 1em;
   line-height: 1.8;
 }
-/* line 479, sass/style.scss */
+/* line 508, sass/style.scss */
 .faq dl dd:before {
   content: "\f118";
   color: #fd6e70;

@@ -216,7 +216,7 @@ header{
     h3{
         margin-top: 0;
         margin-bottom: 1.5em;
-        padding-bottom: 6px;
+        padding-bottom: 10px;
         border-bottom: 2px solid $color_main;
         // font-size: 1.1em;
         font-size: 16px;
@@ -332,7 +332,41 @@ header{
 /*
  * short codeの出力成形用
  */
-.mvno_info{
+.mvno_s_info{
+    a{
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .mybtn{
+        text-align: center;
+        a{
+            display: inline-block;
+            width: 40%;
+            margin: 0 0.5em;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            &:first-of-type{
+                border: 1px solid $color_blue;
+                background-color: $color_blue;
+                color: #fff;
+            }
+        }
+    }
+    @include col-sm{
+        .mybtn{
+            a{
+                display: block;
+                margin: 0.5em 1em;
+                width: initial;
+            }
+            img{
+                display: inherit;
+            }
+        }
+    }
     dl{
         dt,dd{
             float: left;
@@ -349,13 +383,8 @@ header{
     table{
         tr{
             th,td{
-                padding: 5px;
+                // padding: 5px;
                 text-align: center;
-            }
-            .tbl_group{
-                background-color: #eee;
-                text-align: left;
-                padding-left: 5em;
             }
         }
     }

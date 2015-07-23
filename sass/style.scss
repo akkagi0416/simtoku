@@ -332,7 +332,7 @@ header{
 /*
  * short codeの出力成形用
  */
-.mvno_s_info{
+.mvno_info{
     a{
         img{
             max-width: 100%;
@@ -340,6 +340,7 @@ header{
         }
     }
     .mybtn{
+        margin-top: -20px;
         text-align: center;
         span{
             &:after{
@@ -380,6 +381,7 @@ header{
         }
     }
     dl{
+        overflow: hidden;
         dt,dd{
             float: left;
             line-height: 1.8;
@@ -387,9 +389,11 @@ header{
         dt{
             width: 30%;
             clear: both;
+            padding-left: 0.5em;
         }
         dd{
             width: 70%;
+            padding-left: 1em;
         }
     }
     table{
@@ -397,6 +401,21 @@ header{
             th,td{
                 // padding: 5px;
                 text-align: center;
+            }
+        }
+    }
+    .option{
+        table{
+            th, td{
+                padding-left: 1em;
+                text-align: left;
+                line-height: 1.8;
+                vertical-align: top;
+            }
+            @include col-sm{
+                th, td{
+                    white-space: nowrap;
+                }
             }
         }
     }

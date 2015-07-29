@@ -3,7 +3,14 @@
     <div class="row">
         <div class="col-md-8 main">
             <section>
-            <h1 class="category_h1"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></h1>
+<?php
+    $cat = get_the_category();
+    $cat = $cat[0]->cat_name;
+    if( $cat === 'ニュース' ){
+        $cat = 'ニュース <span>～ 格安SIMのちょっと気になるニュースコーナー ～</span>';
+    }
+?>
+            <h1 class="category_h1"><?php echo $cat; ?></h1>
 <?php
     if( have_posts() ) :
         while( have_posts() ) : the_post()

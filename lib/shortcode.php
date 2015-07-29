@@ -46,7 +46,7 @@ function mvno_s_func( $atts ){
 function mvno_head( $mvnoInfo )
 {
     $html = <<< EOM
-    <h2>{$mvnoInfo['mvno']}の基本情報</h2>
+    <h2 id="{$mvnoInfo['shortname']}">{$mvnoInfo['mvno']}の格安SIM情報</h2>
     <div class="row">
         <div class="col-sm-5">
             {$mvnoInfo['afi_img']}
@@ -87,11 +87,12 @@ function mvno_mybtn_s( $mvnoInfo )
     <div class="mybtn">
         <p>
             {$mvnoInfo['afi_txt']}
-            <a href="#">詳細説明はこちら</a>
+            <a href="%URL%">詳細説明はこちら</a>
         </p>
     </div>
 EOM;
-    return $html;
+    $url = site_url() . '/plan/' . $mvnoInfo['shortname'] . '/';
+    return str_replace( '%URL%', $url, $html );
 }
 function mvno_feature( $mvnoInfo )
 {

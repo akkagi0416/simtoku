@@ -26,6 +26,7 @@
         // 親
         // タイトル一覧を自動表示
         $args = array(
+            'posts_per_page' => -1,
             'post_parent' => $post->ID,
             'post_type' => 'page',
             'orderby' => 'menu_order',

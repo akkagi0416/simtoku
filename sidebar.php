@@ -5,7 +5,7 @@
             <a href="http://h.accesstrade.net/sp/cc?rk=0100hxtf00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100hxtf00ekjc" alt="" border="0" /></a>
         </p>
         <div class="side_ranking">
-            <h3>格安SIM 価格ランキング<span style="font-weight: normal; font-size:12px;">(3GBプラン)</span></h3>
+            <h2>格安SIM 価格ランキング<span style="font-weight: normal; font-size:12px;">(3GBプラン)</span></h2>
             <ul>
                 <li><i class="fa fa-trophy fa-fw fa-2x"></i> 1位 850円 <a href="http://h.accesstrade.net/sp/cc?rk=0100hsya00ekjc" rel="nofollow" target="_blank">DMM mobile<img src="http://h.accesstrade.net/sp/rr?rk=0100hsya00ekjc" width="1" height="1" border="0" alt="" /></a></li>
                 <li><i class="fa fa-trophy fa-fw fa-2x"></i> 2位 900円 <a href="https://www.freetel.jp/">FREETEL</a></li>
@@ -16,7 +16,7 @@
         </div><!-- //.side_ranking -->
 
         <div class="side_news">
-            <h3>格安SIMニュース</h3>
+            <h2>格安SIMニュース</h2>
 <?php
     $args = array( 
         'category_name' => 'news',
@@ -34,20 +34,20 @@
                     <div class="news_img">
                         <a href="<?php the_permalink(); ?>">
 <?php
-if( has_post_thumbnail() ) :
+            if( has_post_thumbnail() ) :
 ?>
                             <?php the_post_thumbnail( array( 200, 150 ), array( 'class' => 'img-responsive' ) ); ?>
 <?php
-else :
+            else :
 ?>
                             <img src="http://lorempixel.com/200/150/city" alt="<?php the_title(); ?>" class="img-responsive">
 <?php
-endif;
+            endif;
 ?>
                         </a>
                     </div>
                     <div class="news_content">
-                        <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y-m-d' ); ?></time>
                     </div>
                 </li>

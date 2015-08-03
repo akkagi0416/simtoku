@@ -16,7 +16,34 @@ jQuery(function(){
     jQuery( '#button' ).on( 'click', function(){
         jQuery( '.nav_wrap' ).slideToggle();
     });
+
+    // 画面読み込み時 & 画面回転時
+    jQuery( window ).on( 'load orientationchange',function(){   // resizeは入れない
+        arrange_height();
+    });
+
+    // 画面リサイズ時(タイマーなのは読み込み回数を減らすため)
+    var timer = false;
+    jQuery( window ).resize(function(){
+        if( timer !== false ){
+            clearTimeout( timer );
+        }
+        timer = setTimeout( function(){
+            arrange_height();
+        }, 200 );
+    });
 });
+function arrange_height()
+{
+    var max_height = 0;
+    jQuery( '.relation img' ).each( function(){
+        height = jQuery(this).height();
+        if( max_height < height ){
+            max_height = height;
+        }
+    });
+    jQuery( '.box_img' ).css( 'height', max_height );
+}
 </script>
 <?php wp_footer(); ?>
 <!--[if lt IE 9]>

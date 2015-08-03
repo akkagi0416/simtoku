@@ -13,7 +13,7 @@
 // Import Bootstrap for Sass
 // @import "bootstrap";
 
-// @import "compass";
+@import "compass";
 
 // $color_main : #fed232;
 $color_main : #fdde6e;
@@ -297,6 +297,23 @@ header{
             margin-bottom: 40px;
         }
     }
+    .relation{
+        .box_img{
+            margin-bottom: 10px;
+            img{
+                position: relative;
+                top: 50%;
+                @include translateY( -50% );
+                margin: 0 auto;
+            }
+        }
+        h3{
+            font-size: 15px;
+            font-weight: normal;
+            line-height: 1.4;
+            border: none;
+        }
+    }
 }
 .category_h1{
     @extend h2;
@@ -429,7 +446,7 @@ header{
 }
 aside{
     margin-bottom: 2em;
-    h3{
+    h2{
         padding: 12px;
         font-weight: bold;
         font-size: 16px;
@@ -461,7 +478,7 @@ aside{
                 float: left;
                 width: 70%;
                 padding-left: 5%;
-                h4{
+                h3{
                     margin: 0 0;
                     a{
                         line-height: 1.4;

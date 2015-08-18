@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 <script>
 jQuery(function(){
+    // スマホでnavの開閉
     jQuery( '#button' ).on( 'click', function(){
         jQuery( '.nav_wrap' ).slideToggle();
     });
@@ -39,7 +40,15 @@ jQuery(function(){
             arrange_height();
         }, 200 );
     });
+
+    // sidebarのアイキャッチ画像の位置調整
+    jQuery( 'aside .side_news li' ).each( function(){
+        var h = jQuery(this).height();
+        console.log( h );
+        jQuery(this).children( '.news_img' ).height( h );
+    });
 });
+// 関連記事の高さ調整
 function arrange_height()
 {
     var max_height = 0;

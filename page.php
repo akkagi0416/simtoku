@@ -42,7 +42,7 @@
             'plan' => array(
                 'おすすめプラン',
                 '格安SIMのプラン選びABC',
-                'MVNO紹介',
+                'MVNOの格安SIM一覧',
             ),
             'mobile' => array(
             ),

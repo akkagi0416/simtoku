@@ -480,6 +480,12 @@ aside{
             .news_img{
                 float: left;
                 width: 25%;
+                position: relative;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    @include translateY( -50% );
+                }
             }
             .news_content{
                 float: left;

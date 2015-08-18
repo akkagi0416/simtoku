@@ -451,19 +451,26 @@ aside{
         font-weight: bold;
         font-size: 16px;
         background-color: #eee;
+        &:before{
+            content: none;
+        }
     }
     ul{
         padding-left: 1em;
+        li{
+            list-style: none;
+        }
+        a{
+            font-size: 1.1em;
+            line-height: 2.0;
+        }
+    }
+    .side_ranking{
         li{
             i{ color: #fff; }
             &:nth-of-type(1) i{ color: $color_main; }
             &:nth-of-type(2) i{ color: #ccc; }
             &:nth-of-type(3) i{ color: #666; }
-            list-style: none;
-            a{
-                font-size: 1.1em;
-                line-height: 2.0;
-            }
         }
     }
     .side_news {
@@ -488,7 +495,16 @@ aside{
             }
         }
     }
-    
+    .side_mvno{
+        ul{
+            li{
+                padding: 0.3em 0;
+                a{
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
 }
 footer{
     padding: 1em 0;

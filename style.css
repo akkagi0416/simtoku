@@ -522,92 +522,104 @@ aside h2, aside .category_h1 {
   font-size: 16px;
   background-color: #eee;
 }
-/* line 455, sass/style.scss */
+/* line 454, sass/style.scss */
+aside h2:before, aside .category_h1:before {
+  content: none;
+}
+/* line 458, sass/style.scss */
 aside ul {
   padding-left: 1em;
 }
-/* line 457, sass/style.scss */
+/* line 460, sass/style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 458, sass/style.scss */
-aside ul li i {
-  color: #fff;
-}
-/* line 459, sass/style.scss */
-aside ul li:nth-of-type(1) i {
-  color: #fdde6e;
-}
-/* line 460, sass/style.scss */
-aside ul li:nth-of-type(2) i {
-  color: #ccc;
-}
-/* line 461, sass/style.scss */
-aside ul li:nth-of-type(3) i {
-  color: #666;
-}
 /* line 463, sass/style.scss */
-aside ul li a {
+aside ul a {
   font-size: 1.1em;
   line-height: 2.0;
 }
 /* line 470, sass/style.scss */
+aside .side_ranking li i {
+  color: #fff;
+}
+/* line 471, sass/style.scss */
+aside .side_ranking li:nth-of-type(1) i {
+  color: #fdde6e;
+}
+/* line 472, sass/style.scss */
+aside .side_ranking li:nth-of-type(2) i {
+  color: #ccc;
+}
+/* line 473, sass/style.scss */
+aside .side_ranking li:nth-of-type(3) i {
+  color: #666;
+}
+/* line 477, sass/style.scss */
 aside .side_news li {
   overflow: hidden;
   margin-bottom: 1em;
 }
-/* line 473, sass/style.scss */
+/* line 480, sass/style.scss */
 aside .side_news li .news_img {
   float: left;
   width: 25%;
 }
-/* line 477, sass/style.scss */
+/* line 484, sass/style.scss */
 aside .side_news li .news_content {
   float: left;
   width: 70%;
   padding-left: 5%;
 }
-/* line 481, sass/style.scss */
+/* line 488, sass/style.scss */
 aside .side_news li .news_content h3 {
   margin: 0 0;
 }
-/* line 483, sass/style.scss */
+/* line 490, sass/style.scss */
 aside .side_news li .news_content h3 a {
   line-height: 1.4;
   font-size: 15px;
 }
+/* line 500, sass/style.scss */
+aside .side_mvno ul li {
+  padding: 0.3em 0;
+}
+/* line 502, sass/style.scss */
+aside .side_mvno ul li a {
+  vertical-align: bottom;
+}
 
-/* line 493, sass/style.scss */
+/* line 509, sass/style.scss */
 footer {
   padding: 1em 0;
   background-color: #eee;
 }
-/* line 496, sass/style.scss */
+/* line 512, sass/style.scss */
 footer ul {
   clear: both;
   margin: 16px 0;
   padding: 0;
   text-align: center;
 }
-/* line 501, sass/style.scss */
+/* line 517, sass/style.scss */
 footer ul li {
   display: inline-block;
   padding-top: 10px;
   list-style: none;
 }
-/* line 505, sass/style.scss */
+/* line 521, sass/style.scss */
 footer ul li a {
   margin: 5px 30px;
   font-size: 15px;
   color: #333;
 }
-/* line 510, sass/style.scss */
+/* line 526, sass/style.scss */
 footer ul li a:hover {
   text-decoration: none;
   color: #777;
   border-bottom: 1px solid #777;
 }
-/* line 518, sass/style.scss */
+/* line 534, sass/style.scss */
 footer small {
   display: block;
   margin-bottom: 30px;
@@ -619,23 +631,23 @@ footer small {
 /*
  * about page
  */
-/* line 530, sass/style.scss */
+/* line 546, sass/style.scss */
 .about dl {
   overflow: hidden;
 }
-/* line 532, sass/style.scss */
+/* line 548, sass/style.scss */
 .about dl dt, .about dl dd {
   float: left;
   margin-bottom: 1em;
   line-height: 1.8;
 }
-/* line 537, sass/style.scss */
+/* line 553, sass/style.scss */
 .about dl dt {
   clear: both;
   width: 20%;
   padding-left: 1%;
 }
-/* line 542, sass/style.scss */
+/* line 558, sass/style.scss */
 .about dl dd {
   width: 75%;
   padding-left: 4%;
@@ -644,22 +656,22 @@ footer small {
 /*
  * faq page
  */
-/* line 553, sass/style.scss */
+/* line 569, sass/style.scss */
 .faq dl dt {
   padding-left: 1em;
 }
-/* line 555, sass/style.scss */
+/* line 571, sass/style.scss */
 .faq dl dt:before {
   content: "\f059";
   color: #5c95c5;
 }
-/* line 561, sass/style.scss */
+/* line 577, sass/style.scss */
 .faq dl dd {
   margin-bottom: 2em;
   padding-left: 1em;
   line-height: 1.8;
 }
-/* line 565, sass/style.scss */
+/* line 581, sass/style.scss */
 .faq dl dd:before {
   content: "\f118";
   color: #fd6e70;

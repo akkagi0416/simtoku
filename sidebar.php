@@ -16,11 +16,11 @@
         </div><!-- //.side_ranking -->
 
         <div class="side_news">
-            <h2>格安SIMニュース</h2>
+            <h2><a href="<?php echo home_url( '/category/news' ); ?>">格安SIMニュース</a></h2>
 <?php
     $args = array( 
         'category_name' => 'news',
-        'posts_per_page' => 8,
+        'posts_per_page' => 5,
     );
     $my_query = new WP_Query( $args );
 
@@ -60,5 +60,40 @@
     wp_reset_postdata();
 ?>
         </div><!-- //.side_news -->
+        <div class="side_mvno">
+            <h2><a href="<?php echo home_url( '/plan/' ); ?>">MVNOの格安SIM一覧</a></h2>
+<?php
+    $page = get_page_by_path( 'plan' ); // planページのID取得のため
+    $args = array( 
+        // 'pagename' => 'plan',
+        'post_type' => 'page',
+        'posts_per_page' => -1,
+        'post_parent' => $page->ID,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+    );
+    $custum_field = 'index_group';
+    $index_mvno   = 2;      // 'mvno'のindex_groupのカスタムフィールド値
+
+    $my_query = new WP_Query( $args );
+
+    if( $my_query->have_posts() ) :
+?>
+            <ul>
+<?php
+        while( $my_query->have_posts() ) :$my_query->the_post();
+            if( get_post_meta( get_the_ID(), $custum_field, true ) == $index_mvno ){
+?>
+                <li><a href="<?php the_permalink(); ?>"><i class="fa fa-mobile fa-fw fa-2x"></i><?php the_title(); ?></a></li>
+<?php
+            }
+        endwhile;
+?>
+            </ul>
+<?php
+    endif;
+    wp_reset_postdata();
+?>
+        </div><!-- //.side_mvno -->
     </aside>
 </div>

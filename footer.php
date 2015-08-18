@@ -11,6 +11,13 @@
         <small>Copyright &copy; 2015 <?php bloginfo( 'name' ); ?> All Rights Reserved.</small>
     </div>
 </footer>
+<?php wp_footer(); ?>
+<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 <script>
 jQuery(function(){
     jQuery( '#button' ).on( 'click', function(){
@@ -45,12 +52,5 @@ function arrange_height()
     jQuery( '.box_img' ).css( 'height', max_height );
 }
 </script>
-<?php wp_footer(); ?>
-<!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-<![endif]-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 </body>
 </html>

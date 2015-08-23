@@ -1,9 +1,13 @@
 <div class="col-sm-4">
     <aside>
         <br>
-        <p style="text-align:center;">
-            <a href="http://h.accesstrade.net/sp/cc?rk=0100hxtf00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100hxtf00ekjc" alt="" border="0" /></a>
-        </p>
+        <div class="side_admin">
+            <h2>管理人が使っている格安SIM</h2>
+            <p class="adminbar"><a href="<?php echo get_site_url(); ?>/20150702_blog/">記事:DMM mobileにしました</a></p>
+            <p style="text-align:center;">
+                <a href="http://h.accesstrade.net/sp/cc?rk=0100hxtf00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100hxtf00ekjc" alt="" border="0" /></a>
+            </p>
+        </div><!-- //.side_admin -->
         <div class="side_ranking">
             <h2>格安SIM 価格ランキング<span style="font-weight: normal; font-size:12px;">(3GBプラン)</span></h2>
             <ul>

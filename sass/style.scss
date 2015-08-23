@@ -465,6 +465,14 @@ aside{
             line-height: 2.0;
         }
     }
+    .side_admin{
+        .adminbar{
+            background: url('img/admin.gif') no-repeat left 0px;
+            background-size: 32px;
+            margin-left: 1em;
+            padding: 5px 0 5px 40px;
+        }
+    }
     .side_ranking{
         li{
             i{ color: #fff; }

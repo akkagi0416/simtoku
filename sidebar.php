@@ -2,7 +2,7 @@
     <aside>
         <br>
         <div class="side_admin">
-            <h2>管理人が使っている格安SIM</h2>
+            <h2>管理人が使っているおすすめ格安SIM</h2>
             <p class="adminbar"><a href="<?php echo get_site_url(); ?>/20150702_blog/">記事:DMM mobileにしました</a></p>
             <p style="text-align:center;">
                 <a href="http://h.accesstrade.net/sp/cc?rk=0100hxtf00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100hxtf00ekjc" alt="" border="0" /></a>
@@ -63,6 +63,7 @@
     endif;
     wp_reset_postdata();
 ?>
+            <p style="text-align: right;"><a href="<?php echo get_site_url();?>/category/news/"><i class="fa fa-arrow-right"></i> 他のニュース一覧</a></p>
         </div><!-- //.side_news -->
         <div class="side_mvno">
             <h2><a href="<?php echo home_url( '/plan/' ); ?>">MVNOの格安SIM一覧</a></h2>

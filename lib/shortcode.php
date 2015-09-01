@@ -232,6 +232,17 @@ EOM;
     return $html;
 }
 
+function mvno_img_func()
+{
+    extract( shortcode_atts( array(
+        'shortname' => ocn,
+    ), $atts ) );
+
+    $m = new Mvno();
+    $mvnoInfo = $m->getInfo( $shortname );
+    echo "<p class='mvno_img'>{$mvnoInfo['afi_img']}</p>";
+}
+
 add_shortcode( 'mvno_s', 'mvno_s_func' );
 add_shortcode( 'mvno',   'mvno_func' );
-
+add_shortcode( 'mvno_img', 'mvno_img_func' );

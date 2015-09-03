@@ -12,8 +12,12 @@
 
   ga('create', 'UA-54272662-12', 'auto');
   ga('send', 'pageview');
-
 </script>
+
+<!-- UserHeat -->
+<script src="http://f1.nakanohito.jp/lit/userheat.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">try { var lb = new Vesicomyid.Bivalves("129408"); lb.init(); } catch(err) {} </script>
+<!-- //UserHeat -->
 
         <?php wp_head(); ?>
     </head>
@@ -33,13 +37,13 @@
     <body class="<?php echo $body_class; ?>">
 
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W44CXK"
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N6PS5D"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W44CXK');</script>
+})(window,document,'script','dataLayer','GTM-N6PS5D');</script>
 <!-- End Google Tag Manager -->
 
         <header>

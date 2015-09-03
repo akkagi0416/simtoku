@@ -59,6 +59,7 @@ jQuery(function(){
     // });
 
 });
+
 // 関連記事の高さ調整
 function arrange_height()
 {

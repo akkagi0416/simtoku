@@ -22,7 +22,6 @@ function mvno_func( $atts )
     $html .= '</section>';
 
     return $html;
-    return $ret;
 }
 
 function mvno_s_func( $atts ){
@@ -232,7 +231,7 @@ EOM;
     return $html;
 }
 
-function mvno_img_func()
+function mvno_img_func( $atts )
 {
     extract( shortcode_atts( array(
         'shortname' => ocn,
@@ -240,7 +239,9 @@ function mvno_img_func()
 
     $m = new Mvno();
     $mvnoInfo = $m->getInfo( $shortname );
-    echo "<p class='mvno_img'>{$mvnoInfo['afi_img']}</p>";
+    $html = "<p class='mvno_img'>{$mvnoInfo['afi_img']}</p>";
+
+    return $html;
 }
 
 add_shortcode( 'mvno_s', 'mvno_s_func' );

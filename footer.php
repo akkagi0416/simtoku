@@ -47,6 +47,17 @@ jQuery(function(){
         console.log( h );
         jQuery(this).children( '.news_img' ).height( h );
     });
+
+    // Google Analyticsのリンク回数取得
+    // jQuery("a").click(function(e) {        
+    //     var ahref = jQuery(this).attr('href');
+    //     if (ahref.indexOf("simtoku.net") != -1 || ahref.indexOf("http") == -1 ) {
+    //         ga('send', 'event', '内部リンク', 'クリック', ahref);
+    //     } else { 
+    //         ga('send', 'event', '外部リンク', 'クリック', ahref);
+    //     }
+    // });
+
 });
 // 関連記事の高さ調整
 function arrange_height()

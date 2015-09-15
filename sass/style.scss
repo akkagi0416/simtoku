@@ -233,8 +233,22 @@ header{
         }
     }
     h4{
+        position: relative;
+        margin-bottom: 2em;
+        padding-left: 1.5em;
         font-size: 15px;
         font-weight: bold;
+        &:before{
+            position: absolute;
+            top: 3px;
+            left: 0;
+            display: block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color_main;
+            border-radius: 100%;
+        }
     }
     p{
         margin-bottom: 2em;
@@ -494,11 +508,13 @@ aside{
             &:nth-of-type(3) i{ color: #666; }
         }
     }
-    .side_news {
+    .side_news,
+    .side_blog{
         li{
             overflow: hidden;
             margin-bottom: 1em;
-            .news_img{
+            .news_img,
+            .blog_img{
                 float: left;
                 width: 25%;
                 position: relative;
@@ -508,7 +524,8 @@ aside{
                     @include translateY( -50% );
                 }
             }
-            .news_content{
+            .news_content,
+            .blog_content{
                 float: left;
                 width: 70%;
                 padding-left: 5%;

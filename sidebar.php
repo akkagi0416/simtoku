@@ -2,10 +2,11 @@
     <aside>
         <br>
         <div class="side_admin">
-            <h2>管理人が使っているおすすめ格安SIM</h2>
-            <p class="adminbar"><a href="<?php echo get_site_url(); ?>/20150702_blog/">記事:DMM mobileにしました</a></p>
+            <h2>キャンペーン中のおすすめ格安SIM</h2>
+            <p class="adminbar"><a href="<?php echo get_site_url(); ?>/20150908_news/">記事:BIGLOBE LTE・3G 10,000円キャッシュバック</a></p>
             <p style="text-align:center;">
-                <a href="http://h.accesstrade.net/sp/cc?rk=0100hxtf00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100hxtf00ekjc" alt="" border="0" /></a>
+<!-- <a href="http://h.accesstrade.net/sp/cc?rk=0100hxtf00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100hxtf00ekjc" alt="" border="0" /></a> -->
+                <a href="http://h.accesstrade.net/sp/cc?rk=0100im0x00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100im0x00ekjc" alt="" border="0" /></a>
             </p>
         </div><!-- //.side_admin -->
         <div class="side_ranking">
@@ -100,5 +101,52 @@
     wp_reset_postdata();
 ?>
         </div><!-- //.side_mvno -->
+
+        <div class="side_blog">
+            <h2><a href="<?php echo home_url( '/category/blog' ); ?>">管理人のひとり言</a></h2>
+<?php
+    $args = array( 
+        'category_name' => 'blog',
+        'posts_per_page' => 3,
+    );
+    $my_query = new WP_Query( $args );
+
+    if( $my_query->have_posts() ) :
+?>
+            <ul>
+<?php
+        while( $my_query->have_posts() ) :$my_query->the_post();
+?>
+                <li>
+                    <div class="blog_img">
+                        <a href="<?php the_permalink(); ?>">
+<?php
+            if( has_post_thumbnail() ) :
+?>
+                            <?php the_post_thumbnail( array( 200, 150 ), array( 'class' => 'img-responsive' ) ); ?>
+<?php
+            else :
+?>
+                            <img src="http://lorempixel.com/200/150/city" alt="<?php the_title(); ?>" class="img-responsive">
+<?php
+            endif;
+?>
+                        </a>
+                    </div>
+                    <div class="blog_content">
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y-m-d' ); ?></time>
+                    </div>
+                </li>
+<?php
+        endwhile;
+?>
+            </ul>
+<?php
+    endif;
+    wp_reset_postdata();
+?>
+            <p style="text-align: right;"><a href="<?php echo get_site_url();?>/category/blog/"><i class="fa fa-arrow-right"></i> 他のひとり言一覧</a></p>
+        </div><!-- //.side_blog -->
     </aside>
 </div>

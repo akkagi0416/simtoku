@@ -47,6 +47,11 @@ jQuery(function(){
         console.log( h );
         jQuery(this).children( '.news_img' ).height( h );
     });
+    jQuery( 'aside .side_blog li' ).each( function(){
+        var h = jQuery(this).height();
+        console.log( h );
+        jQuery(this).children( '.blog_img' ).height( h );
+    });
 
     // Google Analyticsのリンク回数取得
     // jQuery("a").click(function(e) {        

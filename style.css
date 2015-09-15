@@ -275,74 +275,89 @@ header .logo:before {
 }
 /* line 235, sass/style.scss */
 .main h4 {
+  position: relative;
+  margin-bottom: 2em;
+  padding-left: 1.5em;
   font-size: 15px;
   font-weight: bold;
 }
-/* line 239, sass/style.scss */
+/* line 241, sass/style.scss */
+.main h4:before {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #fdde6e;
+  border-radius: 100%;
+}
+/* line 253, sass/style.scss */
 .main p {
   margin-bottom: 2em;
 }
-/* line 242, sass/style.scss */
+/* line 256, sass/style.scss */
 .main p + ul,
 .main p + ol {
   margin-top: -1em;
 }
-/* line 246, sass/style.scss */
+/* line 260, sass/style.scss */
 .main .btn {
   margin-top: 1em;
 }
-/* line 249, sass/style.scss */
+/* line 263, sass/style.scss */
 .main ul, .main ol {
   margin-bottom: 1.5em;
 }
-/* line 251, sass/style.scss */
+/* line 265, sass/style.scss */
 .main ul li, .main ol li {
   line-height: 1.8;
   font-size: 15px;
 }
-/* line 256, sass/style.scss */
+/* line 270, sass/style.scss */
 .main .pager {
   padding: 2em 0;
 }
-/* line 260, sass/style.scss */
+/* line 274, sass/style.scss */
 .main section ul {
   padding-left: 1em;
 }
-/* line 262, sass/style.scss */
+/* line 276, sass/style.scss */
 .main section ul li {
   padding: 5px 0;
   list-style: none;
   font-size: 15px;
 }
-/* line 267, sass/style.scss */
+/* line 281, sass/style.scss */
 .main section ul li i.fa {
   padding-right: 0.4em;
   font-size: 30px;
   color: #fdde6e;
   vertical-align: bottom;
 }
-/* line 276, sass/style.scss */
+/* line 290, sass/style.scss */
 .main section .thumbnail img {
   margin-top: 4px;
 }
-/* line 280, sass/style.scss */
+/* line 294, sass/style.scss */
 .main section .img-box {
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
-  /* line 280, sass/style.scss */
+  /* line 294, sass/style.scss */
   .main section .img-box {
     margin-bottom: 1em;
   }
 }
-/* line 285, sass/style.scss */
+/* line 299, sass/style.scss */
 .main section .img-box img {
   margin-top: 4px;
   margin-right: auto;
   margin-left: auto;
 }
 @media (max-width: 767px) {
-  /* line 293, sass/style.scss */
+  /* line 307, sass/style.scss */
   .main section .mobile-box {
     margin: 4px;
     margin-bottom: 20px;
@@ -352,20 +367,20 @@ header .logo:before {
     border-radius: 4px;
   }
 }
-/* line 303, sass/style.scss */
+/* line 317, sass/style.scss */
 .main section .row {
   margin-bottom: 40px;
 }
-/* line 308, sass/style.scss */
+/* line 322, sass/style.scss */
 .main .mvno_img img {
   max-width: 100%;
   height: auto;
 }
-/* line 314, sass/style.scss */
+/* line 328, sass/style.scss */
 .main .relation .box_img {
   margin-bottom: 10px;
 }
-/* line 316, sass/style.scss */
+/* line 330, sass/style.scss */
 .main .relation .box_img img {
   position: relative;
   top: 50%;
@@ -375,7 +390,7 @@ header .logo:before {
   transform: translateY(-50%);
   margin: 0 auto;
 }
-/* line 323, sass/style.scss */
+/* line 337, sass/style.scss */
 .main .relation h3 {
   font-size: 15px;
   font-weight: normal;
@@ -383,7 +398,7 @@ header .logo:before {
   border: none;
 }
 
-/* line 331, sass/style.scss */
+/* line 345, sass/style.scss */
 .category_h1 {
   border: none;
 }
@@ -392,7 +407,7 @@ header .logo:before {
  * 固定ページのみ
  */
 @media (max-width: 767px) {
-  /* line 344, sass/style.scss */
+  /* line 358, sass/style.scss */
   .info .main ul,
   .plan .main ul,
   .mobile .main ul,
@@ -402,7 +417,7 @@ header .logo:before {
     padding-left: 1em;
   }
 }
-/* line 348, sass/style.scss */
+/* line 362, sass/style.scss */
 .info .main ul li,
 .plan .main ul li,
 .mobile .main ul li,
@@ -414,7 +429,7 @@ header .logo:before {
   font-size: 15px;
 }
 @media (max-width: 767px) {
-  /* line 348, sass/style.scss */
+  /* line 362, sass/style.scss */
   .info .main ul li,
   .plan .main ul li,
   .mobile .main ul li,
@@ -424,7 +439,7 @@ header .logo:before {
     padding-left: 14px;
   }
 }
-/* line 356, sass/style.scss */
+/* line 370, sass/style.scss */
 .info .main ul li:before,
 .plan .main ul li:before,
 .mobile .main ul li:before,
@@ -440,22 +455,22 @@ header .logo:before {
 /*
  * short codeの出力成形用
  */
-/* line 373, sass/style.scss */
+/* line 387, sass/style.scss */
 .mvno_info a img {
   max-width: 100%;
   height: auto;
 }
-/* line 378, sass/style.scss */
+/* line 392, sass/style.scss */
 .mvno_info .mybtn {
   margin-top: -40px;
   text-align: center;
 }
-/* line 382, sass/style.scss */
+/* line 396, sass/style.scss */
 .mvno_info .mybtn span:after {
   content: "\f061";
   color: #666;
 }
-/* line 388, sass/style.scss */
+/* line 402, sass/style.scss */
 .mvno_info .mybtn a {
   display: inline-block;
   width: 40%;
@@ -464,53 +479,53 @@ header .logo:before {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-/* line 395, sass/style.scss */
+/* line 409, sass/style.scss */
 .mvno_info .mybtn a:first-of-type {
   border: 1px solid #337ab7;
   background-color: #337ab7;
   color: #fff;
 }
 @media (max-width: 767px) {
-  /* line 405, sass/style.scss */
+  /* line 419, sass/style.scss */
   .mvno_info .mybtn span:after {
     content: "\f063";
   }
-  /* line 409, sass/style.scss */
+  /* line 423, sass/style.scss */
   .mvno_info .mybtn a {
     display: block;
     margin: 0.5em 1em;
     width: initial;
   }
-  /* line 414, sass/style.scss */
+  /* line 428, sass/style.scss */
   .mvno_info .mybtn img {
     display: inherit;
   }
 }
-/* line 419, sass/style.scss */
+/* line 433, sass/style.scss */
 .mvno_info dl {
   overflow: hidden;
 }
-/* line 421, sass/style.scss */
+/* line 435, sass/style.scss */
 .mvno_info dl dt, .mvno_info dl dd {
   float: left;
   line-height: 1.8;
 }
-/* line 425, sass/style.scss */
+/* line 439, sass/style.scss */
 .mvno_info dl dt {
   width: 30%;
   clear: both;
   padding-left: 0.5em;
 }
-/* line 430, sass/style.scss */
+/* line 444, sass/style.scss */
 .mvno_info dl dd {
   width: 70%;
   padding-left: 1em;
 }
-/* line 437, sass/style.scss */
+/* line 451, sass/style.scss */
 .mvno_info table tr th, .mvno_info table tr td {
   text-align: center;
 }
-/* line 445, sass/style.scss */
+/* line 459, sass/style.scss */
 .mvno_info .option table th, .mvno_info .option table td {
   padding-left: 1em;
   padding-bottom: 0.3em;
@@ -519,76 +534,83 @@ header .logo:before {
   vertical-align: top;
 }
 @media (max-width: 767px) {
-  /* line 453, sass/style.scss */
+  /* line 467, sass/style.scss */
   .mvno_info .option table th, .mvno_info .option table td {
     white-space: nowrap;
   }
 }
 
-/* line 460, sass/style.scss */
+/* line 474, sass/style.scss */
 aside {
   margin-bottom: 2em;
 }
-/* line 462, sass/style.scss */
+/* line 476, sass/style.scss */
 aside h2, aside .category_h1 {
   padding: 12px;
   font-weight: bold;
   font-size: 16px;
   background-color: #eee;
 }
-/* line 467, sass/style.scss */
+/* line 481, sass/style.scss */
 aside h2:before, aside .category_h1:before {
   content: none;
 }
-/* line 471, sass/style.scss */
+/* line 485, sass/style.scss */
 aside ul {
   padding-left: 1em;
 }
-/* line 473, sass/style.scss */
+/* line 487, sass/style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 476, sass/style.scss */
+/* line 490, sass/style.scss */
 aside ul a {
   font-size: 1.1em;
   line-height: 2.0;
 }
-/* line 482, sass/style.scss */
+/* line 496, sass/style.scss */
 aside .side_admin .adminbar {
   background: url("img/admin.gif") no-repeat left 0px;
   background-size: 32px;
   margin-left: 1em;
   padding: 5px 0 5px 40px;
 }
-/* line 491, sass/style.scss */
+/* line 505, sass/style.scss */
 aside .side_ranking li i {
   color: #fff;
 }
-/* line 492, sass/style.scss */
+/* line 506, sass/style.scss */
 aside .side_ranking li:nth-of-type(1) i {
   color: #fdde6e;
 }
-/* line 493, sass/style.scss */
+/* line 507, sass/style.scss */
 aside .side_ranking li:nth-of-type(2) i {
   color: #ccc;
 }
-/* line 494, sass/style.scss */
+/* line 508, sass/style.scss */
 aside .side_ranking li:nth-of-type(3) i {
   color: #666;
 }
-/* line 498, sass/style.scss */
-aside .side_news li {
+/* line 513, sass/style.scss */
+aside .side_news li,
+aside .side_blog li {
   overflow: hidden;
   margin-bottom: 1em;
 }
-/* line 501, sass/style.scss */
-aside .side_news li .news_img {
+/* line 516, sass/style.scss */
+aside .side_news li .news_img,
+aside .side_news li .blog_img,
+aside .side_blog li .news_img,
+aside .side_blog li .blog_img {
   float: left;
   width: 25%;
   position: relative;
 }
-/* line 505, sass/style.scss */
-aside .side_news li .news_img img {
+/* line 521, sass/style.scss */
+aside .side_news li .news_img img,
+aside .side_news li .blog_img img,
+aside .side_blog li .news_img img,
+aside .side_blog li .blog_img img {
   position: absolute;
   top: 50%;
   -moz-transform: translateY(-50%);
@@ -596,61 +618,70 @@ aside .side_news li .news_img img {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 511, sass/style.scss */
-aside .side_news li .news_content {
+/* line 527, sass/style.scss */
+aside .side_news li .news_content,
+aside .side_news li .blog_content,
+aside .side_blog li .news_content,
+aside .side_blog li .blog_content {
   float: left;
   width: 70%;
   padding-left: 5%;
 }
-/* line 515, sass/style.scss */
-aside .side_news li .news_content h3 {
+/* line 532, sass/style.scss */
+aside .side_news li .news_content h3,
+aside .side_news li .blog_content h3,
+aside .side_blog li .news_content h3,
+aside .side_blog li .blog_content h3 {
   margin: 0 0;
 }
-/* line 517, sass/style.scss */
-aside .side_news li .news_content h3 a {
+/* line 534, sass/style.scss */
+aside .side_news li .news_content h3 a,
+aside .side_news li .blog_content h3 a,
+aside .side_blog li .news_content h3 a,
+aside .side_blog li .blog_content h3 a {
   line-height: 1.4;
   font-size: 15px;
 }
-/* line 527, sass/style.scss */
+/* line 544, sass/style.scss */
 aside .side_mvno ul li {
   padding: 0.3em 0;
 }
-/* line 529, sass/style.scss */
+/* line 546, sass/style.scss */
 aside .side_mvno ul li a {
   vertical-align: bottom;
 }
 
-/* line 536, sass/style.scss */
+/* line 553, sass/style.scss */
 footer {
   padding: 1em 0;
   background-color: #eee;
 }
-/* line 539, sass/style.scss */
+/* line 556, sass/style.scss */
 footer ul {
   clear: both;
   margin: 16px 0;
   padding: 0;
   text-align: center;
 }
-/* line 544, sass/style.scss */
+/* line 561, sass/style.scss */
 footer ul li {
   display: inline-block;
   padding-top: 10px;
   list-style: none;
 }
-/* line 548, sass/style.scss */
+/* line 565, sass/style.scss */
 footer ul li a {
   margin: 5px 30px;
   font-size: 15px;
   color: #333;
 }
-/* line 553, sass/style.scss */
+/* line 570, sass/style.scss */
 footer ul li a:hover {
   text-decoration: none;
   color: #777;
   border-bottom: 1px solid #777;
 }
-/* line 561, sass/style.scss */
+/* line 578, sass/style.scss */
 footer small {
   display: block;
   margin-bottom: 30px;
@@ -662,23 +693,23 @@ footer small {
 /*
  * about page
  */
-/* line 573, sass/style.scss */
+/* line 590, sass/style.scss */
 .about dl {
   overflow: hidden;
 }
-/* line 575, sass/style.scss */
+/* line 592, sass/style.scss */
 .about dl dt, .about dl dd {
   float: left;
   margin-bottom: 1em;
   line-height: 1.8;
 }
-/* line 580, sass/style.scss */
+/* line 597, sass/style.scss */
 .about dl dt {
   clear: both;
   width: 20%;
   padding-left: 1%;
 }
-/* line 585, sass/style.scss */
+/* line 602, sass/style.scss */
 .about dl dd {
   width: 75%;
   padding-left: 4%;
@@ -687,22 +718,22 @@ footer small {
 /*
  * faq page
  */
-/* line 596, sass/style.scss */
+/* line 613, sass/style.scss */
 .faq dl dt {
   padding-left: 1em;
 }
-/* line 598, sass/style.scss */
+/* line 615, sass/style.scss */
 .faq dl dt:before {
   content: "\f059";
   color: #5c95c5;
 }
-/* line 604, sass/style.scss */
+/* line 621, sass/style.scss */
 .faq dl dd {
   margin-bottom: 2em;
   padding-left: 1em;
   line-height: 1.8;
 }
-/* line 608, sass/style.scss */
+/* line 625, sass/style.scss */
 .faq dl dd:before {
   content: "\f118";
   color: #fd6e70;

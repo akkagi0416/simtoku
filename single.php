@@ -1,7 +1,24 @@
 <?php get_header(); ?> 
+
 <div class="container contents">
     <div class="row">
         <div class="col-sm-8 main">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<style>
+.simtoku_1 { width: 320px; height: 100px; }
+@media(min-width: 768px){ .simtoku_1 { width: 728px; height: 90px; } }
+</style>
+<!-- simtoku_1 -->
+<ins class="adsbygoogle simtoku_1"
+     style="display:block"
+     data-ad-client="ca-pub-6018661257488318"
+     data-ad-slot="2542421381"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <?php
     if( have_posts() ) :
         while( have_posts() ) : the_post()
@@ -17,6 +34,21 @@
                 <li class="previous"><?php previous_post_link( '%link', '<i class="fa fa-arrow-left"></i> 前の記事', TRUE ); ?></li>
                 <li class="next"    ><?php next_post_link( '%link', '次の記事 <i class="fa fa-arrow-right"></i>', TRUE ); ?></li>
             </ul>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<style>
+.simtoku_2 { width: 320px; height: 100px; }
+@media(min-width: 768px){ .simtoku_2 { width: 728px; height: 90px; } }
+</style>
+<!-- simtoku_2 -->
+<ins class="adsbygoogle simtoku_2"
+     style="display:block"
+     data-ad-client="ca-pub-6018661257488318"
+     data-ad-slot="8449354185"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
             <section class="relation">
                 <h2>関連記事のご紹介</h2>
@@ -74,4 +106,6 @@
         <?php get_sidebar(); ?>
     </div><!-- //.row -->
 </div><!-- //.container main + sidebar -->
+
+
 <?php get_footer(); ?>

@@ -385,7 +385,8 @@ header{
 /*
  * short codeの出力成形用
  */
-.mvno_info{
+.mvno_info,
+.mobile_info{
     a{
         img{
             max-width: 100%;
@@ -474,6 +475,13 @@ header{
         }
     }
 }
+.mobile_info{
+  img{
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    padding: 1em;
+  }
+}
 aside{
     margin-bottom: 2em;
     h2{
@@ -501,6 +509,10 @@ aside{
             background-size: 32px;
             margin-left: 1em;
             padding: 5px 0 5px 40px;
+        }
+        img{
+          max-width: 100%;
+          height: auto;
         }
     }
     .side_ranking{

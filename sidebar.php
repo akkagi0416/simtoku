@@ -2,12 +2,7 @@
     <aside>
         <br>
         <div class="side_admin">
-            <h2>キャンペーン中のおすすめ格安SIM</h2>
-            <p class="adminbar"><a href="<?php echo get_site_url(); ?>/20150908_news/">記事:BIGLOBE LTE・3G 10,000円キャッシュバック</a></p>
-            <p style="text-align:center;">
-<!-- <a href="http://h.accesstrade.net/sp/cc?rk=0100hxtf00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100hxtf00ekjc" alt="" border="0" /></a> -->
-                <a href="http://h.accesstrade.net/sp/cc?rk=0100im0x00ekjc" rel="nofollow" target="_blank"><img src="http://h.accesstrade.net/sp/rr?rk=0100im0x00ekjc" alt="" border="0" /></a>
-            </p>
+            <?php echo do_shortcode('[mvno_img shortname="iijmio"]'); ?>
         </div><!-- //.side_admin -->
         <div class="side_ranking">
             <h2>格安SIM 価格ランキング<span style="font-weight: normal; font-size:12px;">(3GBプラン)</span></h2>

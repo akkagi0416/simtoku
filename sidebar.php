@@ -148,5 +148,23 @@
 ?>
             <p style="text-align: right;"><a href="<?php echo get_site_url();?>/category/blog/"><i class="fa fa-arrow-right"></i> 他のひとり言一覧</a></p>
         </div><!-- //.side_blog -->
+
+        <div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<style>
+.simtoku_3 { width: 336px; height: 280px; }
+@media(min-width: 768px){ .simtoku_3 { width: 336px; height: 280px; } }
+</style>
+<!-- simtoku_3 -->
+<ins class="adsbygoogle simtoku_3"
+     style="display:block"
+     data-ad-client="ca-pub-6018661257488318"
+     data-ad-slot="3321150582"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+
     </aside>
 </div>

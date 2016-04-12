@@ -42,6 +42,7 @@ jQuery(function(){
     });
 
     // sidebarのアイキャッチ画像の位置調整
+    /*
     jQuery( 'aside .side_news li' ).each( function(){
         var h = jQuery(this).height();
         console.log( h );
@@ -52,6 +53,7 @@ jQuery(function(){
         console.log( h );
         jQuery(this).children( '.blog_img' ).height( h );
     });
+     */
 
     // Google Analyticsのリンク回数取得
     // jQuery("a").click(function(e) {        

@@ -2,7 +2,7 @@
     <aside>
         <br>
         <div class="side_admin">
-            <?php echo do_shortcode('[mvno_img shortname="iijmio"]'); ?>
+            <?php echo do_shortcode('[mvno_img shortname="dmm"]'); ?>
         </div><!-- //.side_admin -->
         <div class="side_ranking">
             <h2>格安SIM 価格ランキング<span style="font-weight: normal; font-size:12px;">(3GBプラン)</span></h2>

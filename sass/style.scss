@@ -1,8 +1,8 @@
 /*
- Theme Name: sim toku
- Description: sim toku
- Author URI: http://akkagi.info
-*/
+Theme Name: sim toku
+Description: sim toku
+Author URI: http://akkagi.info
+ */
 
 // Import Bootstrap Compass integration
 // @import "bootstrap-compass";
@@ -13,7 +13,7 @@
 // Import Bootstrap for Sass
 // @import "bootstrap";
 
-@import "compass";
+//@import "compass";
 
 // $color_main : #fed232;
 $color_main : #fdde6e;
@@ -26,328 +26,341 @@ $color_red  : #fd6e70;  // red
 $font_size : 15px;
 
 %fontawesome{
-    padding-right: 0.4em;
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-size: 1.3em;
+  padding-right: 0.4em;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: 1.3em;
 }
 
 @mixin col-sm{
-    @media (max-width: 767px){
-        @content;
-    }
+  @media (max-width: 767px){
+    @content;
+  }
+}
+/* for wordpress */
+h1, h2, h3, h4, h5, h6{
+  clear: both;
+}
+.alignright{
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.alignleft{
+  float: left;
+  margin: 0 1em 1em 0;
 }
 
 h1{
-    margin-bottom: 1em;
-    padding: 10px 20px;
-    border-left: 4px solid $color_main;
-    border-bottom: 4px solid $color_main;
-    border-radius: 4px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #555;
-    span{
-        font-size: 75%;
-        font-weight: normal;
-    }
-    @include col-sm{
-        font-size: 20px;
-    }
+  margin-bottom: 1em;
+  padding: 10px 20px;
+  border-left: 4px solid $color_main;
+  border-bottom: 4px solid $color_main;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  span{
+    font-size: 75%;
+    font-weight: normal;
+  }
+  @include col-sm{
+    font-size: 20px;
+  }
 }
 h2{
-    padding: 10px 0;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  @include col-sm{
     font-size: 20px;
-    font-weight: bold;
-    color: #444;
-    @include col-sm{
-        font-size: 20px;
-    }
-    &:before{
-        @extend %fontawesome;
-        content: "\f14a";   // check-square
-        // content: "\f046";   // check-square-o
-        // content: "\f024";   // flag
-        color: $color_main;
-    }
+  }
+  &:before{
+    @extend %fontawesome;
+    content: "\f14a";   // check-square
+    // content: "\f046";   // check-square-o
+    // content: "\f024";   // flag
+    color: $color_main;
+  }
 }
 p{
-    line-height: 1.8;
-    // font-size: 16px;
-    font-size: $font_size;
-    @include col-sm{
-        line-height: 1.6;
-        font-size: 14px;
-    }
+  line-height: 1.8;
+  // font-size: 16px;
+  font-size: $font_size;
+  @include col-sm{
+    line-height: 1.6;
+    font-size: 14px;
+  }
 }
 a{
-    color: $color_blue;
+  color: $color_blue;
 }
 a>img:hover{
-    opacity: 0.8;
+  opacity: 0.8;
 }
 pre{
-    margin-bottom: 2em;
-    line-height: 1.8;
+  margin-bottom: 2em;
+  line-height: 1.8;
 }
 strong{
-    color: $color_red;
+  color: $color_red;
 }
 header{
-    // overflow: hidden;
+  // overflow: hidden;
+  .container{
+    position: relative;
+    form{
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      input[type="text"]{
+        width: 15em;
+      }
+    }
+  }
+  @include col-sm{
     .container{
-        position: relative;
-        form{
-            position: absolute;
-            top: 1em;
-            right: 1em;
-            input[type="text"]{
-                width: 15em;
-            }
+      margin-bottom: 4px;
+      form{
+        position: static;
+      }
+      search,
+      button{
+        position: absolute;
+        top: 4px;
+        right: 1em;
+        padding: 4px;
+        font-size: 10px;
+        border-radius: 4px; 
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #666;
+        i.fa-bars{
+          display: block;
+          font-size: 20px;
         }
+        &:hover{
+          background-color: #eee;
+        }
+      }
+    }
+  }
+  .logo{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+    line-height: 1.1;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    &:before{
+      content: none;
     }
     @include col-sm{
-        .container{
-            margin-bottom: 4px;
-            form{
-                position: static;
-            }
-            search,
-            button{
-                position: absolute;
-                top: 4px;
-                right: 1em;
-                padding: 4px;
-                font-size: 10px;
-                border-radius: 4px; 
-                border: 1px solid #ccc;
-                background-color: #fff;
-                color: #666;
-                i.fa-bars{
-                    display: block;
-                    font-size: 20px;
-                }
-                &:hover{
-                    background-color: #eee;
-                }
-            }
-        }
+      font-size: 20px;
     }
-    .logo{
-        margin-top: 20px;
-        margin-bottom: 10px;
-        padding: 0;
-        line-height: 1.1;
-        font-size: 24px;
-        font-weight: bold;
-        border: none;
-        &:before{
-            content: none;
-        }
-        @include col-sm{
-            font-size: 20px;
-        }
-    }
+  }
 }
 .nav_wrap{
-    border-bottom: 5px solid $color_main;
-    @include col-sm{
-        display: none;
-    }
-    nav{
-        &.navbar-default{
-            margin-bottom: 0;
-            background-color: #fff;
-            border: none;
-            .navbar-nav>li>a{
-                font-size: 1.1em;
-                font-weight: bold;
-                color: #333;
-                &:hover{
-                    border-bottom: 5px solid darken( $color_main, 33% );
-                    margin-bottom: -5px;
-                }
-            }
+  border-bottom: 5px solid $color_main;
+  @include col-sm{
+    display: none;
+  }
+  nav{
+    &.navbar-default{
+      margin-bottom: 0;
+      background-color: #fff;
+      border: none;
+      .navbar-nav>li>a{
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333;
+        &:hover{
+          border-bottom: 5px solid darken( $color_main, 33% );
+          margin-bottom: -5px;
         }
-        /* nav icon */
-        ul{
-            li{
-                a{
-                    &:before{
-                        @extend %fontawesome;
-                    }
-                }
-                &.info      a:before{ content: "\f044"; }   // pencil-square-o
-                &.plan      a:before{ content: "\f115"; }   // folder-open-o
-                &.mobile    a:before{ content: "\f10b"; }   // mobile
-                // &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
-                &.guide     a:before{ content: "\f15d"; }   // sort-alpha-asc
-                &.news      a:before{ content: "\f0f6"; }   // file-text-o
-                &.faq       a:before{ content: "\f0e5"; }   // comment-o
-                &.technic   a:before{ content: "\f0ad"; }   // wrench
-            }
-        }
+      }
     }
+    /* nav icon */
+    ul{
+      li{
+        a{
+          &:before{
+            @extend %fontawesome;
+          }
+        }
+        &.info      a:before{ content: "\f044"; }   // pencil-square-o
+        &.plan      a:before{ content: "\f115"; }   // folder-open-o
+        &.mobile    a:before{ content: "\f10b"; }   // mobile
+        // &.guide     a:before{ content: "\f087"; }   // thumbs-o-up
+        &.guide     a:before{ content: "\f15d"; }   // sort-alpha-asc
+        &.news      a:before{ content: "\f0f6"; }   // file-text-o
+        &.faq       a:before{ content: "\f0e5"; }   // comment-o
+        &.technic   a:before{ content: "\f0ad"; }   // wrench
+      }
+    }
+  }
 }
 .img_main{
-    p{
-        padding: 0px 0 5px 1em;
-        font-size: 24px;
-        line-height: 1.0;
-        @include col-sm{
-            font-size: 14px;
-        }
+  p{
+    padding: 0px 0 5px 1em;
+    font-size: 24px;
+    line-height: 1.0;
+    @include col-sm{
+      font-size: 14px;
     }
-    .p_first{
-        margin-top: 60px;
-        @include col-sm{
-            margin-top: 1em;
-        }
+  }
+  .p_first{
+    margin-top: 60px;
+    @include col-sm{
+      margin-top: 1em;
     }
+  }
 }
 .breadcrumb{
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .contents{
-    // margin-bottom: 2em;
+  // margin-bottom: 2em;
 }
 .main{
-    margin-bottom: 2em;
-    time{
-        display: block;
-        margin-bottom: 1em;
+  margin-bottom: 2em;
+  time{
+    display: block;
+    margin-bottom: 1em;
+  }
+  h1 + time{
+    text-align: right;
+  }
+  h3{
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    padding-left: 0.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $color_main;
+    // font-size: 1.1em;
+    font-size: 16px;
+    font-weight: bold;
+    i{
+      padding-right: 0.3em;
+      font-size: 1.3em;
     }
-    h1 + time{
-        text-align: right;
+  }
+  h4{
+    position: relative;
+    margin-bottom: 2em;
+    padding-left: 1.5em;
+    font-size: 15px;
+    font-weight: bold;
+    &:before{
+      position: absolute;
+      top: 3px;
+      left: 0;
+      display: block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: $color_main;
+      border-radius: 100%;
+    }
+  }
+  p{
+    margin-bottom: 2em;
+  }
+  p + ul,
+  p + ol{
+    margin-top: -1em;
+  }
+  .btn{
+    margin-top: 1em;
+  }
+  ul, ol{
+    margin-bottom: 1.5em;
+    li{
+      line-height: 1.8;
+      font-size: $font_size;
+    }
+  }
+  .pager{
+    padding: 2em 0;
+  }
+  section{
+    ul{
+      padding-left: 1em;
+      li{
+        padding: 5px 0;
+        list-style: none;
+        // font-size: 16px;
+        font-size: $font_size;
+        i.fa{
+          padding-right: 0.4em;
+          font-size: 30px;
+          color: $color_main;
+          vertical-align: bottom;
+        }
+      }
+    }
+    .thumbnail{
+      img{
+        margin-top: 4px;
+      }
+    }
+    .img-box{
+      margin-bottom: 0;
+      @include col-sm{
+        margin-bottom: 1em;
+      }
+      img{
+        margin-top: 4px;
+        margin-right: auto;
+        margin-left: auto;
+        // @include box-shadow(1px 1px 3px #ccc);
+        // box-shadow: 1px 1px 3px #ccc;
+      }
+    }
+    .mobile-box{
+      @include col-sm{
+        margin: 4px;
+        margin-bottom: 20px;
+        padding: 4px;
+        padding-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    }
+    .row{
+      margin-bottom: 40px;
+    }
+  }
+  .mvno_img{
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .relation{
+    .box_img{
+      margin-bottom: 10px;
+      img{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        // @include translateY( -50% );
+        margin: 0 auto;
+      }
     }
     h3{
-        margin-top: 0;
-        margin-bottom: 1.5em;
-        padding-left: 0.5em;
-        padding-bottom: 10px;
-        border-bottom: 2px solid $color_main;
-        // font-size: 1.1em;
-        font-size: 16px;
-        font-weight: bold;
-        i{
-            padding-right: 0.3em;
-            font-size: 1.3em;
-        }
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 1.4;
+      border: none;
     }
-    h4{
-        position: relative;
-        margin-bottom: 2em;
-        padding-left: 1.5em;
-        font-size: 15px;
-        font-weight: bold;
-        &:before{
-            position: absolute;
-            top: 3px;
-            left: 0;
-            display: block;
-            content: "";
-            width: 10px;
-            height: 10px;
-            background-color: $color_main;
-            border-radius: 100%;
-        }
-    }
-    p{
-        margin-bottom: 2em;
-    }
-    p + ul,
-    p + ol{
-        margin-top: -1em;
-    }
-    .btn{
-        margin-top: 1em;
-    }
-    ul, ol{
-        margin-bottom: 1.5em;
-        li{
-            line-height: 1.8;
-            font-size: $font_size;
-        }
-    }
-    .pager{
-        padding: 2em 0;
-    }
-    section{
-        ul{
-            padding-left: 1em;
-            li{
-                padding: 5px 0;
-                list-style: none;
-                // font-size: 16px;
-                font-size: $font_size;
-                i.fa{
-                    padding-right: 0.4em;
-                    font-size: 30px;
-                    color: $color_main;
-                    vertical-align: bottom;
-                }
-            }
-        }
-        .thumbnail{
-            img{
-                margin-top: 4px;
-            }
-        }
-        .img-box{
-            margin-bottom: 0;
-            @include col-sm{
-                margin-bottom: 1em;
-            }
-            img{
-                margin-top: 4px;
-                margin-right: auto;
-                margin-left: auto;
-                // @include box-shadow(1px 1px 3px #ccc);
-                // box-shadow: 1px 1px 3px #ccc;
-            }
-        }
-        .mobile-box{
-            @include col-sm{
-                margin: 4px;
-                margin-bottom: 20px;
-                padding: 4px;
-                padding-bottom: 20px;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-        }
-        .row{
-            margin-bottom: 40px;
-        }
-    }
-    .mvno_img{
-        img{
-            max-width: 100%;
-            height: auto;
-        }
-    }
-    .relation{
-        .box_img{
-            margin-bottom: 10px;
-            img{
-                position: relative;
-                top: 50%;
-                @include translateY( -50% );
-                margin: 0 auto;
-            }
-        }
-        h3{
-            font-size: 15px;
-            font-weight: normal;
-            line-height: 1.4;
-            border: none;
-        }
-    }
+  }
 }
 .category_h1{
-    @extend h2;
-    border: none;
+  @extend h2;
+  border: none;
 }
 /*
  * 固定ページのみ
@@ -358,122 +371,123 @@ header{
 .guide .main,
 .faq .main,
 .technic .main{
-    ul{
-        @include col-sm{
-            padding-left: 1em;
-        }
-        li{
-            margin-bottom: 12px;
-            list-style: none;
-            // font-size: 16px;
-            font-size: $font_size;
-            @include col-sm{
-                padding-left: 14px;
-            }
-            &:before{
-                @extend %fontawesome;
-                font-size: 1.2em;
-                padding-right: 0.6em;
-                // content: "\f15c";   // file-text
-                // content: "\f0f6";   // file-text-o
-                content: "\f0c6";   // paperclip
-                color: $color_blue;
-            }
-        }
+  ul{
+    @include col-sm{
+      padding-left: 1em;
     }
+    li{
+      margin-bottom: 12px;
+      list-style: none;
+      // font-size: 16px;
+      font-size: $font_size;
+      @include col-sm{
+        padding-left: 14px;
+      }
+      &:before{
+        @extend %fontawesome;
+        font-size: 1.2em;
+        padding-right: 0.6em;
+        // content: "\f15c";   // file-text
+        // content: "\f0f6";   // file-text-o
+        content: "\f0c6";   // paperclip
+        color: $color_blue;
+      }
+    }
+  }
 }
 /*
  * short codeの出力成形用
  */
 .mvno_info,
 .mobile_info{
+  a{
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .mybtn{
+    margin-top: -40px;
+    text-align: center;
+    span{
+      &:after{
+        @extend %fontawesome;
+        content: "\f061";   // arrow-right
+        color: #666;
+      }
+    }
     a{
-        img{
-            max-width: 100%;
-            height: auto;
-        }
+      display: inline-block;
+      width: 40%;
+      margin: 0 0.5em;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      &:first-of-type{
+        border: 1px solid $color_blue;
+        background-color: $color_blue;
+        color: #fff;
+      }
     }
+  }
+  @include col-sm{
     .mybtn{
-        margin-top: -40px;
+      span{
+        &:after{
+          content: "\f063";   // arrow-down
+        }
+      }
+      a{
+        display: block;
+        margin: 0.5em 1em;
+        width: initial;
+      }
+      img{
+        display: inherit;
+      }
+    }
+  }
+  dl{
+    overflow: hidden;
+    dt,dd{
+      float: left;
+      line-height: 1.8;
+    }
+    dt{
+      width: 30%;
+      clear: both;
+      padding-left: 0.5em;
+    }
+    dd{
+      width: 70%;
+      padding-left: 1em;
+    }
+  }
+  table{
+    tr{
+      th,td{
+        // padding: 5px;
         text-align: center;
-        span{
-            &:after{
-                @extend %fontawesome;
-                content: "\f061";   // arrow-right
-                color: #666;
-            }
-        }
-        a{
-            display: inline-block;
-            width: 40%;
-            margin: 0 0.5em;
-            padding: 10px 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            &:first-of-type{
-                border: 1px solid $color_blue;
-                background-color: $color_blue;
-                color: #fff;
-            }
-        }
+      }
     }
-    @include col-sm{
-        .mybtn{
-            span{
-                &:after{
-                    content: "\f063";   // arrow-down
-                }
-            }
-            a{
-                display: block;
-                margin: 0.5em 1em;
-                width: initial;
-            }
-            img{
-                display: inherit;
-            }
-        }
-    }
-    dl{
-        overflow: hidden;
-        dt,dd{
-            float: left;
-            line-height: 1.8;
-        }
-        dt{
-            width: 30%;
-            clear: both;
-            padding-left: 0.5em;
-        }
-        dd{
-            width: 70%;
-            padding-left: 1em;
-        }
-    }
+  }
+  .option{
+    margin-bottom: 2em;
     table{
-        tr{
-            th,td{
-                // padding: 5px;
-                text-align: center;
-            }
+      th, td{
+        padding-left: 1em;
+        padding-bottom: 0.3em;
+        text-align: left;
+        line-height: 1.8;
+        vertical-align: top;
+      }
+      @include col-sm{
+        th, td{
+          white-space: nowrap;
         }
+      }
     }
-    .option{
-        table{
-            th, td{
-                padding-left: 1em;
-                padding-bottom: 0.3em;
-                text-align: left;
-                line-height: 1.8;
-                vertical-align: top;
-            }
-            @include col-sm{
-                th, td{
-                    white-space: nowrap;
-                }
-            }
-        }
-    }
+  }
 }
 .mobile_info{
   img{
@@ -483,169 +497,170 @@ header{
   }
 }
 aside{
-    margin-bottom: 2em;
-    h2{
-        padding: 12px;
-        font-weight: bold;
-        font-size: 16px;
-        background-color: #eee;
-        &:before{
-            content: none;
-        }
+  margin-bottom: 2em;
+  h2{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #eee;
+    &:before{
+      content: none;
     }
-    ul{
-        padding-left: 1em;
-        li{
-            list-style: none;
-        }
-        a{
-            font-size: 1.1em;
-            line-height: 2.0;
-        }
+  }
+  ul{
+    padding-left: 1em;
+    li{
+      list-style: none;
     }
-    .side_admin{
-        .adminbar{
-            background: url('img/admin.gif') no-repeat left 0px;
-            background-size: 32px;
-            margin-left: 1em;
-            padding: 5px 0 5px 40px;
-        }
+    a{
+      font-size: 1.1em;
+      line-height: 2.0;
+    }
+  }
+  .side_admin{
+    .adminbar{
+      background: url('img/admin.gif') no-repeat left 0px;
+      background-size: 32px;
+      margin-left: 1em;
+      padding: 5px 0 5px 40px;
+    }
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .side_ranking{
+    li{
+      i{ color: #fff; }
+      &:nth-of-type(1) i{ color: $color_main; }
+      &:nth-of-type(2) i{ color: #ccc; }
+      &:nth-of-type(3) i{ color: #666; }
+    }
+  }
+  .side_news,
+  .side_blog{
+    li{
+      overflow: hidden;
+      margin-bottom: 1em;
+      .news_img,
+      .blog_img{
+        float: left;
+        width: 25%;
+        position: relative;
         img{
-          max-width: 100%;
-          height: auto;
+          // position: absolute;
+          // top: 50%;
+          // transform: translate(-50%);
+          // @include translateY( -50% );
         }
-    }
-    .side_ranking{
-        li{
-            i{ color: #fff; }
-            &:nth-of-type(1) i{ color: $color_main; }
-            &:nth-of-type(2) i{ color: #ccc; }
-            &:nth-of-type(3) i{ color: #666; }
+      }
+      .news_content,
+      .blog_content{
+        float: left;
+        width: 70%;
+        padding-left: 5%;
+        h3{
+          margin: 0 0;
+          a{
+            line-height: 1.4;
+            font-size: $font_size;
+          }
         }
+      }
     }
-    .side_news,
-    .side_blog{
-        li{
-            overflow: hidden;
-            margin-bottom: 1em;
-            .news_img,
-            .blog_img{
-                float: left;
-                width: 25%;
-                position: relative;
-                img{
-                    position: absolute;
-                    top: 50%;
-                    @include translateY( -50% );
-                }
-            }
-            .news_content,
-            .blog_content{
-                float: left;
-                width: 70%;
-                padding-left: 5%;
-                h3{
-                    margin: 0 0;
-                    a{
-                        line-height: 1.4;
-                        font-size: $font_size;
-                    }
-                }
-            }
+  }
+  .side_mvno{
+    ul{
+      li{
+        padding: 0.3em 0;
+        a{
+          vertical-align: bottom;
         }
+      }
     }
-    .side_mvno{
-        ul{
-            li{
-                padding: 0.3em 0;
-                a{
-                    vertical-align: bottom;
-                }
-            }
-        }
-    }
+  }
 }
 footer{
-    padding: 1em 0;
-    background-color: #eee;
-    ul{
-        clear: both;
-        margin: 16px 0;
-        padding: 0;
-        text-align: center;
-        li{
-            display: inline-block;
-            padding-top: 10px;
-            list-style: none;
-            a{
-                margin: 5px 30px;
-                // font-size: 14px;
-                font-size: $font_size;
-                color: #333;
-                &:hover{
-                    text-decoration: none;
-                    color: #777;
-                    border-bottom: 1px solid #777;
-                }
-            }
+  padding: 1em 0;
+  background-color: #eee;
+  ul{
+    clear: both;
+    margin: 16px 0;
+    padding: 0;
+    text-align: center;
+    li{
+      display: inline-block;
+      padding-top: 10px;
+      list-style: none;
+      a{
+        margin: 5px 30px;
+        // font-size: 14px;
+        font-size: $font_size;
+        color: #333;
+        &:hover{
+          text-decoration: none;
+          color: #777;
+          border-bottom: 1px solid #777;
         }
+      }
     }
-    small{
-        display: block;
-        margin-bottom: 30px;
-        padding-top: 20px;
-        text-align: center;
-        color: #999;
-    }
+  }
+  small{
+    display: block;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: #999;
+  }
 }
 /*
  * about page
  */
 .about{
-    dl{
-        overflow: hidden;
-        dt,dd{
-            float: left;
-            margin-bottom: 1em;
-            line-height: 1.8;
-        }
-        dt{
-            clear: both;
-            width: 20%;
-            padding-left: 1%;
-        }
-        dd{
-            width: 75%;
-            padding-left: 4%;
-        }
+  dl{
+    overflow: hidden;
+    dt,dd{
+      float: left;
+      margin-bottom: 1em;
+      line-height: 1.8;
     }
+    dt{
+      clear: both;
+      width: 20%;
+      padding-left: 1%;
+    }
+    dd{
+      width: 75%;
+      padding-left: 4%;
+    }
+  }
 }
 /*
  * faq page
  */
 .faq{
-    dl{
-        dt{
-            padding-left: 1em;
-            &:before{
-                @extend %fontawesome;
-                content: "\f059";   // question-circle
-                color: $color_blue_light;
-            }
-        }
-        dd{
-            margin-bottom: 2em;
-            padding-left: 1em;
-            line-height: 1.8;
-            &:before{
-                @extend %fontawesome;
-                content: "\f118";   // smile-o
-                color: $color_red;
-            }
-        }
+  dl{
+    dt{
+      padding-left: 1em;
+      &:before{
+        @extend %fontawesome;
+        content: "\f059";   // question-circle
+        color: $color_blue_light;
+      }
     }
+    dd{
+      margin-bottom: 2em;
+      padding-left: 1em;
+      line-height: 1.8;
+      &:before{
+        @extend %fontawesome;
+        content: "\f118";   // smile-o
+        color: $color_red;
+      }
+    }
+  }
 }
 /* desktop first at modified only mobile because of using bootstrap */
 @media (max-width: 767px){
-    /* use @content in sass */
+  /* use @content in sass */
 }

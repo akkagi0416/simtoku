@@ -6,7 +6,7 @@
 function mvno_func( $atts )
 {
     extract( shortcode_atts( array(
-        'shortname' => iijmio,
+        'shortname' => 'iijmio',
     ), $atts ) );
 
     $m = new Mvno();
@@ -26,7 +26,7 @@ function mvno_func( $atts )
 
 function mvno_s_func( $atts ){
     extract( shortcode_atts( array(
-        'shortname' => iijmio,
+        'shortname' => 'iijmio',
     ), $atts ) );
     $m = new Mvno();
     $mvnoInfo = $m->getInfo( $shortname );
@@ -127,7 +127,7 @@ EOM2;
         // if( $row['plan_basic'] == 1 ){
             // データSIM or 音声通話付SIM表示 (SMS付SIMなし)
             if( $row['sim_data'] == 1 || $row['sim_voice'] == 1 ){
-                $table .= '<tr>';
+                $html .= '<tr>';
                 $html .= '<td>' . $row['plan_name'] . '</td>';
                 if( $row['sim_voice'] == 1 ){
                     $html .= '<td>〇</td>';
@@ -234,7 +234,7 @@ EOM;
 function mvno_img_func( $atts )
 {
     extract( shortcode_atts( array(
-        'shortname' => iijmio,
+        'shortname' => 'iijmio',
     ), $atts ) );
 
     $m = new Mvno();
@@ -247,7 +247,7 @@ function mvno_img_func( $atts )
 function mvno_txt_func( $atts )
 {
     extract( shortcode_atts( array(
-        'shortname' => iijmio,
+        'shortname' => 'iijmio',
     ), $atts ) );
 
     $m = new Mvno();

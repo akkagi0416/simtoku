@@ -11,6 +11,7 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-54272662-12', 'auto');
+  ga('require', 'linkid');
   ga('send', 'pageview');
 </script>
 
